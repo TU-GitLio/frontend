@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import SideBar from "@/components/SideBar";
 import Title from "@/components/Title";
 
-export default function IntroductionPage() {
+export default function SkillsPage() {
   return (
     <>
       <div className="w-full h-full grid bg-[#DDE5FF] grid-cols-4">

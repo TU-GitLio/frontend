@@ -31,10 +31,10 @@ export default function SideBar() {
             <div>experience</div>
           </button>
         </Link>
-        <Link href={"/projects"}>
+        <Link href={"/works"}>
           <button className="flex flex-row flex-grow justify-between w-full rounded-xl bg-blue-500 text-white py-2 px-4 my-3">
             <div className="bg-white w-6 h-[20] rounded-full text-black">4</div>
-            <div>projects</div>
+            <div>works</div>
           </button>
         </Link>
         <Link href={"/outro"}>
