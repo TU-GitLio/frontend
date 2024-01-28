@@ -5,12 +5,7 @@ import React, { ReactNode } from "react";
 
 function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex flex-col min-h-screen min-w-full bg-background max-h-screen">
-      <nav className="flex items-center border-b border-border h-[75px] px-4 py-2">
-        <Logo />
-        <Title />
-        <PublishBtn />
-      </nav>
+    <div className="flex flex-col min-w-full bg-background ">
       <main className="flex flex-grow w-full h-full ">{children}</main>
     </div>
   );

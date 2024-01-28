@@ -1,18 +1,22 @@
-import PublishBtn from "@/components/PublishBtn";
+import EditBuilder from "@/components/EditBuilder";
+import Header from "@/components/Header";
+import SideBar from "@/components/SideBar";
+import Title from "@/components/Title";
 
 export default function IntroductionPage() {
   return (
     <>
       <div className="w-full h-full grid bg-[#DDE5FF] grid-cols-4">
-        <div className="flex justify-center col-span-1 relative row-span-3 w-[100] h-full bg-[#DDE5FF] border border-blue-400"></div>
-
-        <div className="col-span-3 row-span-1 h-[70px] bg-[#DCE6FF] border border-blue-400 flex items-center justify-between px-4">
-          <p>헤더 div 내용</p>
-          <PublishBtn />
+        <div className="flex justify-center col-span-1 relative row-span-3 w-[100] h-full border border-blue-400">
+          <SideBar />
         </div>
+        <Header />
+        <div className="col-span-2 h-[4/5] bg-[#DCE6FF] border border-blue-400">
+          <div className="flex flex-col h-full items-center px-5 ">
+            <Title />
+            <EditBuilder />
+          </div>
 
-        <div className="col-span-2 h-screen bg-[#DCE6FF] border border-blue-400">
-          <p>중앙 사이드 내용</p>
         </div>
 
         <div className="flex justify-center items-center col-span-1 h-screen bg-[#DCE6FF] border border-blue-400">
