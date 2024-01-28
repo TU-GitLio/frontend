@@ -16,6 +16,7 @@ export default function IntroductionPage() {
             <Title />
             <EditBuilder />
           </div>
+
         </div>
 
         <div className="flex justify-center items-center col-span-1 h-screen bg-[#DCE6FF] border border-blue-400">
