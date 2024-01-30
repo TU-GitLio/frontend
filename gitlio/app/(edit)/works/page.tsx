@@ -6,12 +6,12 @@ import Title from "@/components/Title";
 export default function SkillsPage() {
   return (
     <>
-      <div className="w-full h-full grid bg-[#DDE5FF] grid-cols-4">
+      <div className="w-full h-full grid bg-[#DDE5FF] grid-cols-5">
         <div className="flex justify-center col-span-1 relative row-span-3 w-[100] h-full border border-blue-400">
           <SideBar />
         </div>
         <Header />
-        <div className="col-span-2 h-[4/5] bg-[#DCE6FF] border border-blue-400">
+        <div className="col-span-3 h-[4/5] bg-[#DCE6FF] border border-blue-400">
           <div className="flex flex-col h-full items-center px-5 ">
             <Title />
             <EditBuilder />
