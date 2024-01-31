@@ -9,11 +9,13 @@ export default function SideBar() {
   const titleUrl = titleArray[titleArray.length - 1];
 
   return (
-    <div className="flex flex-col items-center w-full h-full py-10 bg-[#DDE5FF] md:z-1 sm:z-1">
+    <div className="flex flex-col items-center w-full h-full py-10 bg-[#DDE5FF] ">
       <img src="/image81.png" alt="Profile Image" />
-      <div className="text-center md:w-3/5 sm:w-3/5 sm:hidden">
-        <div className="bg-[#e2e5f0] w-[250px] rounded-[12px] md:hidden sm:hidden">
-          <span>no2jfamily@naver.com</span>
+      <div className="text-center">
+        <div className="bg-[#e2e5f0]  w-[190px] md:w-3/5 sm:w-3/5 md:hidden sm:hidden rounded-[12px]">
+          <span className="w-full md:hidden sm:hidden">
+            no2jfamily@naver.com
+          </span>
         </div>
       </div>
       <div className="flex flex-row mt-10 shrink-0 sm:hidden">
