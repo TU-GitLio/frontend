@@ -1,5 +1,5 @@
 import EditBuilder from "@/components/EditBuilder";
-import Header from "@/components/Header";
+import Header from "@/components/EditHeader";
 import SideBar from "@/components/SideBar";
 import Title from "@/components/Title";
 

@@ -1,5 +1,5 @@
 import EditBuilder from "@/components/EditBuilder";
-import Header from "@/components/Header";
+import EditHeader from "@/components/EditHeader";
 import SideBar from "@/components/SideBar";
 import Title from "@/components/Title";
 
@@ -10,7 +10,7 @@ export default function IntroductionPage() {
         <div className="flex justify-center row-span-9 col-span-1 relative h-full border border-blue-400">
           <SideBar />
         </div>
-        <Header />
+        <EditHeader />
         <div className="col-span-3 row-span-8 h-full bg-[#DCE6FF] border border-blue-400">
           <div className="flex flex-col h-full items-center px-5 ">
             <Title />
