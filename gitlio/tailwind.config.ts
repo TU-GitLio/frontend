@@ -19,6 +19,7 @@ const config: Config = {
       md: { min: "620px", max: "1023px" },
       lg: { min: "1080px" },
     },
+    mode: "jit",
   },
   plugins: [],
 };

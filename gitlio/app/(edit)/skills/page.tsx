@@ -7,24 +7,48 @@ export default function SkillsPage() {
   return (
     <>
       <div className="w-full h-full grid bg-[#DDE5FF] grid-cols-5 grid-rows-9">
-        <div className="flex justify-center row-span-9 col-span-1 relative h-full border border-blue-400">
+        <div className="flex justify-center row-span-9 col-span-1 relative h-full border border-#B1C9FF]">
           <SideBar />
         </div>
         <Header />
-        <div className="col-span-3 row-span-8 h-full bg-[#DCE6FF] border border-blue-400">
+        <div className="col-span-3 row-span-8 h-full bg-[#DCE6FF] border border-[#B1C9FF]">
           <div className="flex flex-col h-full items-center px-5 ">
             <Title />
-            <EditBuilder />
+            <EditBuilder>
+              <div className="flex flex-row justify-around mt-5 pb-5 border-b-4">
+                <div className="w-32 h-16 border-[#B1C9FF] border-4 text-center">
+                  Framework
+                </div>
+                <div className="w-32 h-16 border-[#B1C9FF] border-4 text-center">
+                  Language
+                </div>
+                <div className="w-32 h-16 border-[#B1C9FF] border-4 text-center">
+                  Tool
+                </div>
+              </div>
+              <div className="flex flex-row justify-evenly h-[calc(100%-108px)]">
+                <div className="shrink-0 basis-38 border-r-4 text-center"></div>
+                <div className="shrink-0 basis-38 border-r-4 text-center"></div>
+              </div>
+            </EditBuilder>
           </div>
         </div>
 
-        <div className="flex justify-center items-center col-span-1 row-span-8 h-full bg-[#DCE6FF] border border-blue-400">
-          <div className="w-[90%] h-[80%] bg-[#BFCBF6] rounded-[30px] flex justify-center">
-            <div className="w-[40%] h-[24%] bg-[#6385FD] rounded-[20px] flex items-center text-center justify-center ml-0 mt-10 text-white">
-              레이아웃1
+        <div className="flex flex-col justify-center items-center col-span-1 row-span-8 h-full bg-[#DCE6FF] border border-#B1C9FF]">
+          <div className="w-[90%] h-4/5 bg-[#BFCBF6] rounded-[30px] flex flex-col items-center justify-between">
+            <div className="flex flex-row justify-evenly items-center mt-5">
+              <input
+                className="block w-4/5 rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-#B1C9FF] focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                placeholder="languages.."
+              />
             </div>
-            <div className="w-[40%] h-[24%] bg-[#E6E6E6] rounded-[20px] flex items-center text-center justify-center ml-4 mt-10 ">
-              레이아웃2
+
+            <div>
+              <div>언어 입력 시 나오는 화면</div>
+            </div>
+
+            <div className="flex flex-row justify-center items-center mb-3 w-32 h-10 rounded-xl cursor-pointer border-[#B1C9FF] bg-white text-black border-4">
+              가로변환
             </div>
           </div>
         </div>
