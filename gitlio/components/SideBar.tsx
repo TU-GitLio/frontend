@@ -1,7 +1,7 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function SideBar() {
   const pathName = usePathname();
@@ -9,105 +9,134 @@ export default function SideBar() {
   const titleUrl = titleArray[titleArray.length - 1];
 
   return (
-    <div className="flex flex-col items-center w-full h-full py-10 bg-[#DDE5FF] ">
-      <img src="/image81.png" alt="Profile Image" />
-      <div className="text-center">
-        <div className="bg-[#e2e5f0]  w-[190px] md:w-3/5 sm:w-3/5 md:hidden sm:hidden rounded-[12px]">
-          <span className="w-full md:hidden sm:hidden">
-            no2jfamily@naver.com
-          </span>
+    <div className="flex h-full w-full sm:h-full">
+      <div className="flex flex-col items-center w-full bg-[#DDE5FF] border border-pink-500">
+        <div className="text-center mt-[10%] ">
+          <img
+            src="/gitlio.png"
+            alt="Profile Image"
+            className="lg:w-[100%] lg:h-[75%]"
+          />
         </div>
-      </div>
-      <div className="flex flex-row mt-10 shrink-0 sm:hidden">
-        <div className="mr-3">임시저장</div>
-        <div>미리보기</div>
-      </div>
-      <div className="flex flex-col w-3/5 md:w-3/5 sm:w-3/5 mt-20">
-        <Link href={"/introduction"}>
-          {titleUrl === "introduction" ? (
-            <button className="flex flex-row flex-grow justify-between w-full rounded-xl bg-[#B1C9FF] text-black py-2 px-4 my-3">
-              <div className="bg-white w-6 h-[20] rounded-full text-black  mr-3 shrink-0">
-                <span className="font-bold">1</span>
-              </div>
-              <div className="overflow-hidden font-bold">introduction</div>
-            </button>
-          ) : (
-            <button className="flex flex-row flex-grow justify-between w-full rounded-xl bg-blue-500 text-white py-2 px-4 my-3">
-              <div className="bg-white w-6 h-[20] rounded-full text-black  mr-3 shrink-0">
-                <span>1</span>
-              </div>
-              <div className="overflow-hidden">introduction</div>
-            </button>
-          )}
-        </Link>
-        <Link href={"/skills"}>
-          {titleUrl === "skills" ? (
-            <button className="flex flex-row flex-grow justify-between w-full rounded-xl bg-[#B1C9FF] text-black py-2 px-4 my-3">
-              <div className="bg-white w-6 h-[20] rounded-full text-black  mr-3 shrink-0">
-                <span className="font-bold">2</span>
-              </div>
-              <div className="overflow-hidden font-bold">skills</div>
-            </button>
-          ) : (
-            <button className="flex flex-row flex-grow justify-between w-full rounded-xl bg-blue-500 text-white py-2 px-4 my-3">
-              <div className="bg-white w-6 h-[20] rounded-full text-black  mr-3 shrink-0">
-                <span>2</span>
-              </div>
-              <div className="overflow-hidden">skills</div>
-            </button>
-          )}
-        </Link>
-        <Link href={"/experience"}>
-          {titleUrl === "experience" ? (
-            <button className="flex flex-row flex-grow justify-between w-full rounded-xl bg-[#B1C9FF] text-black py-2 px-4 my-3">
-              <div className="bg-white w-6 h-[20] rounded-full text-black  mr-3 shrink-0">
-                <span className="font-bold">3</span>
-              </div>
-              <div className="overflow-hidden font-bold">experience</div>
-            </button>
-          ) : (
-            <button className="flex flex-row flex-grow justify-between w-full rounded-xl bg-blue-500 text-white py-2 px-4 my-3">
-              <div className="bg-white w-6 h-[20] rounded-full text-black  mr-3 shrink-0">
-                <span>3</span>
-              </div>
-              <div className="overflow-hidden">experience</div>
-            </button>
-          )}
-        </Link>
-        <Link href={"/works"}>
-          {titleUrl === "works" ? (
-            <button className="flex flex-row flex-grow justify-between w-full rounded-xl bg-[#B1C9FF] text-black py-2 px-4 my-3">
-              <div className="bg-white w-6 h-[20] rounded-full text-black  mr-3 shrink-0">
-                <span className="font-bold">4</span>
-              </div>
-              <div className="overflow-hidden font-bold">works</div>
-            </button>
-          ) : (
-            <button className="flex flex-row flex-grow justify-between w-full rounded-xl bg-blue-500 text-white py-2 px-4 my-3">
-              <div className="bg-white w-6 h-[20] rounded-full text-black  mr-3 shrink-0">
-                <span>4</span>
-              </div>
-              <div className="overflow-hidden">works</div>
-            </button>
-          )}
-        </Link>
-        <Link href={"/outro"}>
-          {titleUrl === "outro" ? (
-            <button className="flex flex-row flex-grow justify-between w-full rounded-xl bg-[#B1C9FF] text-black py-2 px-4 my-3">
-              <div className="bg-white w-6 h-[20] rounded-full text-black  mr-3 shrink-0">
-                <span className="font-bold">5</span>
-              </div>
-              <div className="overflow-hidden font-bold">outro</div>
-            </button>
-          ) : (
-            <button className="flex flex-row flex-grow justify-between w-full rounded-xl bg-blue-500 text-white py-2 px-4 my-3">
-              <div className="bg-white w-6 h-[20] rounded-full text-black  mr-3 shrink-0">
-                <span>5</span>
-              </div>
-              <div className="overflow-hidden">outro</div>
-            </button>
-          )}
-        </Link>
+        <div className="flex w-[190px] items-center justify-center bg-[#C6D2FF] rounded-[12px] md:hidden sm:hidden">
+          <div className="font-normal">no2jfamily@naver.com</div>
+        </div>
+        <div className="flex flex-row mt-[8%] mb-[3%] shrink-0 sm:mt-10">
+          <div className="mr-3 font-medium">임시저장</div>
+          <div className="mr-3 font-medium">|</div>
+          <div className="mr-3 font-medium">미리보기</div>
+        </div>
+        <div className="flex flex-col w-[75%] h-full xl:justify-center">
+          <Link href={"/introduction"}>
+            {titleUrl === "introduction" ? (
+              <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-[#B1C9FF] text-black py-2 px-4 my-[7%]">
+                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                  <span className="font-medium">1</span>
+                </div>
+                <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
+                  <span className="">Introduction</span>
+                </div>
+              </button>
+            ) : (
+              <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-blue-500 text-white py-2 px-4 my-[7%]">
+                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                  <span className="font-medium">1</span>
+                </div>
+                <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
+                  Introduction
+                </div>
+              </button>
+            )}
+          </Link>
+
+          <Link href={"/skills"}>
+            {titleUrl === "skills" ? (
+              <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-[#B1C9FF] text-black py-2 px-4 my-[7%]">
+                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                  <span className="font-medium">2</span>
+                </div>
+                <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
+                  Skills
+                </div>
+              </button>
+            ) : (
+              <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-blue-500 text-white py-2 px-4 my-[7%]">
+                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                  <span className="font-medium">2</span>
+                </div>
+                <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
+                  Skills
+                </div>
+              </button>
+            )}
+          </Link>
+
+          <Link href={"/experience"}>
+            {titleUrl === "experience" ? (
+              <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-[#B1C9FF] text-black py-2 px-4 my-[7%]">
+                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                  <span className="font-medium">3</span>
+                </div>
+                <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
+                  Experience
+                </div>
+              </button>
+            ) : (
+              <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-blue-500 text-white py-2 px-4 my-[7%]">
+                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                  <span className="font-medium">3</span>
+                </div>
+                <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
+                  Experience
+                </div>
+              </button>
+            )}
+          </Link>
+
+          <Link href={"/works"}>
+            {titleUrl === "works" ? (
+              <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-[#B1C9FF] text-black py-2 px-4 my-[7%]">
+                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                  <span className="font-medium">4</span>
+                </div>
+                <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
+                  Works
+                </div>
+              </button>
+            ) : (
+              <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-blue-500 text-white py-2 px-4 my-[7%]">
+                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                  <span className="font-medium">4</span>
+                </div>
+                <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
+                  Works
+                </div>
+              </button>
+            )}
+          </Link>
+
+          <Link href={"/outro"}>
+            {titleUrl === "outro" ? (
+              <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-[#B1C9FF] text-black py-2 px-4 my-[7%]">
+                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                  <span className="font-medium">5</span>
+                </div>
+                <div className="mr-auto ml-2 font-medium md:truncate sm:truncatemr-auto ml-2 font-medium">
+                  Outro
+                </div>
+              </button>
+            ) : (
+              <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-blue-500 text-white py-2 px-4 my-[7%]">
+                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                  <span className="font-medium">5</span>
+                </div>
+                <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
+                  Outro
+                </div>
+              </button>
+            )}
+          </Link>
+        </div>
       </div>
     </div>
   );

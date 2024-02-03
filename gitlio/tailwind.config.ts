@@ -16,11 +16,11 @@ const config: Config = {
     },
     screens: {
       sm: { min: "265px", max: "768px" },
-      md: { min: "620px", max: "1023px" },
-      lg: { min: "1080px" },
+      md: { min: "768px", max: "1023px" },
+      lg: { min: "1023px" },
+      xl: { min: "1300px" },
     },
     mode: "jit",
-    xl: { min: "1300px" },
   },
   plugins: [],
 };
