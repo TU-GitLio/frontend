@@ -20,6 +20,7 @@ const config: Config = {
       lg: { min: "1080px" },
     },
     mode: "jit",
+    xl: { min: "1300px" },
   },
   plugins: [],
 };
