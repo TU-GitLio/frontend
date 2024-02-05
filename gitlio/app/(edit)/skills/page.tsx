@@ -6,24 +6,24 @@ import Title from "@/components/Title";
 export default function SkillsPage() {
   return (
     <>
-      <div className="w-full h-full grid bg-[#DDE5FF] grid-cols-5 grid-rows-9">
+      <div className="w-full h-full grid bg-primary grid-cols-5 grid-rows-9">
         <div className="flex justify-center row-span-9 col-span-1 relative h-full border border-#B1C9FF]">
           <SideBar />
         </div>
         <Header />
-        <div className="col-span-3 row-span-8 h-full bg-[#DCE6FF] border border-[#B1C9FF]">
+        <div className="col-span-3 row-span-8 h-full bg-primary border border-[#B1C9FF]">
           <div className="flex flex-col h-full items-center px-5 ">
             <Title />
             <EditBuilder>
-              <div className="flex flex-row justify-around mt-5 pb-5 border-b-4">
-                <div className="w-32 h-16 border-[#B1C9FF] border-4 text-center">
-                  Framework
+              <div className="flex flex-row justify-around items-center text-center mt-5 pb-5 border-b-4">
+                <div className="flex flex-col justify-center items-center w-32 h-16 border-[#B1C9FF] border-4">
+                  <div className="">Framework</div>
                 </div>
-                <div className="w-32 h-16 border-[#B1C9FF] border-4 text-center">
-                  Language
+                <div className="flex flex-col justify-center items-center  w-32 h-16 border-[#B1C9FF] border-4">
+                  <div className="">Language</div>
                 </div>
-                <div className="w-32 h-16 border-[#B1C9FF] border-4 text-center">
-                  Tool
+                <div className="flex flex-col justify-center items-center  w-32 h-16 border-[#B1C9FF] border-4">
+                  <div className="">Skills</div>
                 </div>
               </div>
               <div className="flex flex-row justify-evenly h-[calc(100%-108px)]">
@@ -43,8 +43,23 @@ export default function SkillsPage() {
               />
             </div>
 
-            <div>
-              <div>언어 입력 시 나오는 화면</div>
+            <div className="flex flex-col justify-evenly items-center w-full h-full">
+              <div className="w-full flex flex-row justify-around items-center">
+                <div className="flex flex-col justify-center hover:font-bold hover:bg-gray-50 rounded-lg basis-28 h-[100px] border-black  border-4 text-center">
+                  <div>Javascript</div>
+                </div>
+                <div className="flex flex-col justify-center hover:font-bold hover:bg-gray-50 rounded-lg basis-28 h-[100px] border-black  border-4 text-center">
+                  <div>React</div>
+                </div>
+              </div>
+              <div className="w-full flex flex-row justify-around items-center">
+                <div className="flex flex-col justify-center hover:font-bold hover:bg-gray-50 rounded-lg basis-28 h-[100px] border-black border-4 text-center">
+                  <div>Next.js</div>
+                </div>
+                <div className="flex flex-col justify-center hover:font-bold hover:bg-gray-50 rounded-lg basis-28 h-[100px] border-black  border-4 text-center">
+                  <div>Css</div>
+                </div>
+              </div>
             </div>
 
             <div className="flex flex-row justify-center items-center mb-3 w-32 h-10 rounded-xl cursor-pointer border-[#B1C9FF] bg-white text-black border-4">

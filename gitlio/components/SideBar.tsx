@@ -10,7 +10,7 @@ export default function SideBar() {
 
   return (
     <div className="flex h-full w-full sm:h-full">
-      <div className="flex flex-col items-center w-full bg-[#DDE5FF] border border-pink-500">
+      <div className="flex flex-col items-center w-full bg-primary border border-pink-500">
         <div className="text-center mt-[10%] ">
           <img
             src="/gitlio.png"
@@ -30,7 +30,7 @@ export default function SideBar() {
           <Link href={"/introduction"}>
             {titleUrl === "introduction" ? (
               <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-[#B1C9FF] text-black py-2 px-4 my-[7%]">
-                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                <div className="bg-white w-6  rounded-full text-black shrink-0">
                   <span className="font-medium">1</span>
                 </div>
                 <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
@@ -39,7 +39,7 @@ export default function SideBar() {
               </button>
             ) : (
               <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-blue-500 text-white py-2 px-4 my-[7%]">
-                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                <div className="bg-white w-6  rounded-full text-black shrink-0">
                   <span className="font-medium">1</span>
                 </div>
                 <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
@@ -52,7 +52,7 @@ export default function SideBar() {
           <Link href={"/skills"}>
             {titleUrl === "skills" ? (
               <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-[#B1C9FF] text-black py-2 px-4 my-[7%]">
-                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                <div className="bg-white w-6  rounded-full text-black shrink-0">
                   <span className="font-medium">2</span>
                 </div>
                 <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
@@ -61,7 +61,7 @@ export default function SideBar() {
               </button>
             ) : (
               <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-blue-500 text-white py-2 px-4 my-[7%]">
-                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                <div className="bg-white w-6  rounded-full text-black shrink-0">
                   <span className="font-medium">2</span>
                 </div>
                 <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
@@ -74,7 +74,7 @@ export default function SideBar() {
           <Link href={"/experience"}>
             {titleUrl === "experience" ? (
               <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-[#B1C9FF] text-black py-2 px-4 my-[7%]">
-                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                <div className="bg-white w-6  rounded-full text-black shrink-0">
                   <span className="font-medium">3</span>
                 </div>
                 <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
@@ -83,7 +83,7 @@ export default function SideBar() {
               </button>
             ) : (
               <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-blue-500 text-white py-2 px-4 my-[7%]">
-                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                <div className="bg-white w-6  rounded-full text-black shrink-0">
                   <span className="font-medium">3</span>
                 </div>
                 <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
@@ -96,7 +96,7 @@ export default function SideBar() {
           <Link href={"/works"}>
             {titleUrl === "works" ? (
               <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-[#B1C9FF] text-black py-2 px-4 my-[7%]">
-                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                <div className="bg-white w-6 rounded-full text-black shrink-0">
                   <span className="font-medium">4</span>
                 </div>
                 <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
@@ -105,7 +105,7 @@ export default function SideBar() {
               </button>
             ) : (
               <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-blue-500 text-white py-2 px-4 my-[7%]">
-                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                <div className="bg-white w-6 rounded-full text-black shrink-0">
                   <span className="font-medium">4</span>
                 </div>
                 <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
@@ -118,7 +118,7 @@ export default function SideBar() {
           <Link href={"/outro"}>
             {titleUrl === "outro" ? (
               <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-[#B1C9FF] text-black py-2 px-4 my-[7%]">
-                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                <div className="bg-white w-6 rounded-full text-black shrink-0">
                   <span className="font-medium">5</span>
                 </div>
                 <div className="mr-auto ml-2 font-medium md:truncate sm:truncatemr-auto">
@@ -127,7 +127,7 @@ export default function SideBar() {
               </button>
             ) : (
               <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-blue-500 text-white py-2 px-4 my-[7%]">
-                <div className="bg-white w-6 h-[20] rounded-full text-black shrink-0">
+                <div className="bg-white w-6 rounded-full text-black shrink-0">
                   <span className="font-medium">5</span>
                 </div>
                 <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
