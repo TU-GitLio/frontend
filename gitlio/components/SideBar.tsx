@@ -19,7 +19,7 @@ export default function SideBar() {
           />
         </div>
         <div className="flex w-[190px] items-center justify-center bg-[#C6D2FF] rounded-[12px] md:hidden sm:hidden">
-          <div className="font-normal">no2jfamily@naver.com</div>
+          <div className="font-normal">GitHub repo url</div>
         </div>
         <div className="flex flex-row mt-[8%] mb-[3%] shrink-0 sm:mt-10 sm:flex-col sm:justify-center">
           <div className="mr-3 font-medium">임시저장</div>

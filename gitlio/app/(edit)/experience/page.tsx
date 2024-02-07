@@ -16,14 +16,14 @@ export default function ExperiencePage() {
             <Title />
             <EditBuilder>
               <div className="flex flex-row justify-around items-center h-full">
-                <div className="relative flex flex-col justify-center basis-96 h-80 text-center box-border border-4 border-primary">
+                <div className="relative flex flex-col justify-center basis-[400px] h-80 text-center box-border border-4 border-primary">
                   <div className="absolute left-0 top-0 ml-5 mt-5 text-xl font-bold md:hidden sm:hidden">
                     horizontal
                   </div>
                   <ul className="w-full timeline flex flex-rol justify-around flex-nowrap px-2">
                     <li className="shrink-0">
                       <div className="timeline-start timeline-box">
-                        <input className="border-2 border-primary w-24 h-5" />
+                        <input className="border-2 border-primary w-24 h-5 focus:outline-blue-400 focus:ring" />
                       </div>
                       <div className="timeline-middle">
                         <svg
@@ -57,12 +57,12 @@ export default function ExperiencePage() {
                           />
                         </svg>
                       </div>
-                      <input className="border-2 border-primary w-24 h-5" />
+                      <input className="border-2 border-primary w-24 h-5 focus:outline-blue-400 focus:ring" />
                       <hr />
                     </li>
                     <li className="shrink-0">
                       <hr />
-                      <input className="border-2 border-primary w-24 h-5" />
+                      <input className="border-2 border-primary w-24 h-5 focus:outline-blue-400 focus:ring" />
                       <div className="timeline-middle">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -81,13 +81,13 @@ export default function ExperiencePage() {
                     </li>
                   </ul>
                 </div>
-                <div className="relative flex flex-col justify-center basis-96 h-80 text-center border-4 border-primary">
+                <div className="relative flex flex-col justify-center basis-[400px] h-80 text-center border-4 border-primary">
                   <div className="absolute left-0 top-0 ml-5 mt-5 text-xl font-bold md:hidden sm:hidden">
                     vertical
                   </div>
                   <ul className="h-full timeline timeline-vertical flex flex-col justify-between items-center py-6">
                     <li className="relative">
-                      <input className="border-2 border-primary w-24 h-5" />
+                      <input className="border-2 border-primary w-24 h-5 focus:outline-blue-400 focus:ring" />
                       <div className="timeline-middle">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -120,12 +120,12 @@ export default function ExperiencePage() {
                           />
                         </svg>
                       </div>
-                      <input className="border-2 border-primary w-24 h-5" />
+                      <input className="border-2 border-primary w-24 h-5 focus:outline-blue-400 focus:ring" />
                       <hr />
                     </li>
                     <li className="relative">
                       <hr />
-                      <input className="border-2 border-primary w-24 h-5" />
+                      <input className="border-2 border-primary w-24 h-5 focus:outline-blue-400 focus:ring" />
                       <div className="timeline-middle">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
