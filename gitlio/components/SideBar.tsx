@@ -10,7 +10,7 @@ export default function SideBar() {
 
   return (
     <div className="flex h-full w-full sm:h-full">
-      <div className="flex flex-col items-center w-full bg-primary border border-pink-500">
+      <div className="flex flex-col items-center w-full bg-primary border border-primary">
         <div className="text-center mt-[10%] ">
           <img
             src="/gitlio.png"
