@@ -9,8 +9,8 @@ export default function Title() {
 
   return (
     <>
-      <div className="w-4/5 border-[#BFCBF6] border-b-4 text-center mt-10 mb-10 pb-5">
-        <span className="text-6xl font-bold">
+      <div className="text-left mt-2 mb-2 mr-auto ml-[12%]">
+        <span className="text-3xl xl:text-5xl font-bold">
           {titleArray[titleArray.length - 1]}
         </span>
       </div>

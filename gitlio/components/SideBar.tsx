@@ -21,12 +21,12 @@ export default function SideBar() {
         <div className="flex w-[190px] items-center justify-center bg-[#C6D2FF] rounded-[12px] md:hidden sm:hidden">
           <div className="font-normal">no2jfamily@naver.com</div>
         </div>
-        <div className="flex flex-row mt-[8%] mb-[3%] shrink-0 sm:mt-10">
+        <div className="flex flex-row mt-[8%] mb-[3%] shrink-0 sm:mt-10 sm:flex-col sm:justify-center">
           <div className="mr-3 font-medium">임시저장</div>
-          <div className="mr-3 font-medium">|</div>
-          <div className="mr-3 font-medium">미리보기</div>
+          <div className="mr-3 font-medium sm:hidden">|</div>
+          <div className="mr-3 font-medium sm:mt-2">미리보기</div>
         </div>
-        <div className="flex flex-col w-[75%] h-full xl:justify-center">
+        <div className="flex flex-col w-[75%] h-full justify-center sm:justify-center md:justify-center">
           <Link href={"/introduction"}>
             {titleUrl === "introduction" ? (
               <button className="flex flex-row flex-grow justify-between w-full rounded-full bg-[#B1C9FF] text-black py-2 px-4 my-[7%]">
