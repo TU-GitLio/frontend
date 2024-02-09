@@ -130,7 +130,7 @@ import Header from "@/components/Header";
 import SideBar from "@/components/SideBar";
 import Title from "@/components/Title";
 
-export default function DefaultPage() {
+export default function IntroductionPage() {
   return (
     <>
       <div className="w-screen h-screen bg-[#c5f0c0] grid grid-cols-5">
