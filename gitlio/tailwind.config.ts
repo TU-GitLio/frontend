@@ -18,10 +18,18 @@ const config: Config = {
       },
     },
     screens: {
-      sm: { min: "265px", max: "768px" },
-      md: { min: "768px", max: "1023px" },
+      sm: { max: "768px" },
+      md: { max: "1023px" },
       lg: { min: "1023px" },
       xl: { min: "1300px" },
+
+      //전서진: 1273.7px (13.3인치, 33.7cm) -> lg
+      //정준영: 1440px (15인치, 38.1cm)     -> xl
+
+      // sm: { min: "265px", max: "768px" },
+      // md: { min: "620px", max: "1023px" },
+      // lg: { min: "1080px" },
+      // xl: { min: "1300px" },
     },
     mode: "jit",
   },
