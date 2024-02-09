@@ -125,6 +125,7 @@
 // sm:h-[80%] md:h-[81.9%] lg:h-[86.7%] xl:h-[89%]
 
 import EditBuilder from "@/components/EditBuilder";
+import EditHeader from "@/components/EditHeader";
 import Header from "@/components/Header";
 import SideBar from "@/components/SideBar";
 import Title from "@/components/Title";

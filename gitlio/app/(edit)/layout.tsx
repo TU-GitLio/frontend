@@ -5,8 +5,8 @@ import React, { ReactNode } from "react";
 
 function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex flex-col min-w-full bg-background ">
-      <main className="flex flex-grow w-full h-full ">{children}</main>
+    <div className="flex flex-col min-w-full min-h-screen bg-background ">
+      <main className="flex flex-grow w-full h-screen">{children}</main>
     </div>
   );
 }
