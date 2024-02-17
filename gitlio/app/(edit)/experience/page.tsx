@@ -2,6 +2,7 @@ import EditBuilder from "@/components/EditBuilder";
 import EditHeader from "@/components/EditHeader";
 import SideBar from "@/components/SideBar";
 import Title from "@/components/Title";
+import { useState } from "react";
 
 export default function ExperiencePage() {
   return (
@@ -12,88 +13,87 @@ export default function ExperiencePage() {
         </div>
         <EditHeader />
         <div className="col-span-4 row-span-8 h-full bg-primary border border-[#B1C9FF]">
-          <div className="flex flex-col h-full items-center px-5 ">
+          <div className="flex flex-col h-full items-center px-5">
             <Title />
             <EditBuilder>
               <div className="flex flex-row justify-around items-center h-full">
-                <div className="relative flex flex-col justify-center basis-[400px] h-80 text-center box-border border-4 border-primary">
-                  <div className="absolute left-0 top-0 ml-5 mt-5 text-xl font-bold md:hidden sm:hidden">
-                    horizontal
-                  </div>
-                  <ul className="w-full timeline flex flex-rol justify-around flex-nowrap px-2">
-                    <li className="shrink-0">
-                      <div className="timeline-start timeline-box">
-                        <input className="border-2 border-primary w-24 h-5 focus:outline-blue-400 focus:ring" />
+                <div className="flex flex-col justify-center basis-[480px] h-80 text-center box-border border-4 border-primary">
+                  <ul className="timeline flex flex-row flex-nowrap justify-center xl:overflow-hidden">
+                    <li>
+                      <div className="w-[130px] h-[42px] timeline-start timeline-box">
+                        <input className="w-full h-full text-xs text-center hover:border-2 hover:border-primary" />
                       </div>
                       <div className="timeline-middle">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="w-5 h-5"
+                          className="w-5 h-5 text-primary"
                         >
                           <path
                             fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-0.214-.882l-3.483 4.79-0.88-0.88a.75.75 0 10-0.06 0.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                             clipRule="evenodd"
                           />
                         </svg>
                       </div>
-                      <hr />
+                      <hr className="bg-primary" />
                     </li>
-                    <li className="shrink-0">
-                      <hr />
+                    <li>
+                      <hr className="bg-primary" />
                       <div className="timeline-middle">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="w-5 h-5"
+                          className="w-5 h-5 text-primary"
                         >
                           <path
                             fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-0.214-.882l-3.483 4.79-0.88-0.88a.75.75 0 10-0.06 0.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                             clipRule="evenodd"
                           />
                         </svg>
                       </div>
-                      <input className="border-2 border-primary w-24 h-5 focus:outline-blue-400 focus:ring" />
-                      <hr />
+                      <div className="timeline-end timeline-box w-[130px] h-[42px]">
+                        <input className="w-full h-full text-xs text-center hover:border-2 hover:border-primary" />
+                      </div>
+                      <hr className="bg-primary" />
                     </li>
-                    <li className="shrink-0">
-                      <hr />
-                      <input className="border-2 border-primary w-24 h-5 focus:outline-blue-400 focus:ring" />
+                    <li>
+                      <hr className="bg-primary" />
+                      <div className="timeline-start timeline-box w-[130px] h-[42px] ">
+                        <input className="w-full h-full text-xs text-center hover:border-2 hover:border-primary" />
+                      </div>
                       <div className="timeline-middle">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="w-5 h-5"
+                          className="w-5 h-5 text-primary"
                         >
                           <path
                             fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-0.214-.882l-3.483 4.79-0.88-0.88a.75.75 0 10-0.06 0.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                             clipRule="evenodd"
                           />
                         </svg>
                       </div>
-                      <hr />
                     </li>
                   </ul>
                 </div>
-                <div className="relative flex flex-col justify-center basis-[400px] h-80 text-center border-4 border-primary">
-                  <div className="absolute left-0 top-0 ml-5 mt-5 text-xl font-bold md:hidden sm:hidden">
-                    vertical
-                  </div>
-                  <ul className="h-full timeline timeline-vertical flex flex-col justify-between items-center py-6">
-                    <li className="relative">
-                      <input className="border-2 border-primary w-24 h-5 focus:outline-blue-400 focus:ring" />
+                <div className="relative flex flex-row justify-center basis-[480px] h-80 box-border text-center border-4 border-primary">
+                  <ul className="flex flex-col md:overflow-hidden justify-center items-center timeline timeline-vertical absolute h-full">
+                    <li>
+                      <div className="timeline-start timeline-box w-[130px] h-[42px]">
+                        <input className="w-full h-full text-xs text-center hover:border-2 hover:border-primary" />
+                      </div>
                       <div className="timeline-middle">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="w-5 h-5 absolute right-0"
+                          className="w-5 h-5 text-primary"
                         >
                           <path
                             fillRule="evenodd"
@@ -102,16 +102,16 @@ export default function ExperiencePage() {
                           />
                         </svg>
                       </div>
-                      <hr />
+                      <hr className="bg-primary" />
                     </li>
                     <li>
-                      <hr />
+                      <hr className="bg-primary" />
                       <div className="timeline-middle">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="w-5 h-5"
+                          className="w-5 h-5 text-primary"
                         >
                           <path
                             fillRule="evenodd"
@@ -120,18 +120,22 @@ export default function ExperiencePage() {
                           />
                         </svg>
                       </div>
-                      <input className="border-2 border-primary w-24 h-5 focus:outline-blue-400 focus:ring" />
-                      <hr />
+                      <div className="timeline-end timeline-box w-[130px] h-[42px]">
+                        <input className="w-full h-full text-xs text-center hover:border-2 hover:border-primary" />
+                      </div>
+                      <hr className="bg-primary" />
                     </li>
-                    <li className="relative">
-                      <hr />
-                      <input className="border-2 border-primary w-24 h-5 focus:outline-blue-400 focus:ring" />
+                    <li>
+                      <hr className="bg-primary" />
+                      <div className="timeline-start timeline-box w-[130px] h-[42px]">
+                        <input className="w-full h-full text-xs text-center hover:border-2 hover:border-primary" />
+                      </div>
                       <div className="timeline-middle">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="w-5 h-5 absolute right-0"
+                          className="w-5 h-5 text-primary"
                         >
                           <path
                             fillRule="evenodd"
