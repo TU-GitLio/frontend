@@ -19,12 +19,12 @@ export default function StartPage() {
             className="relative z-10 w-auto h-auto max-w-xs lg:max-w-lg xl:max-w-xl"
           />
         </div>
-        <div className="text-center mt-8 text-xl text-[#8288a1] underline underline-offset-4">
+        <button className="btn btn-ghost mt-8 text-xl text-[#8288a1] underline underline-offset-4">
           LOG IN
-        </div>
-        <div className="text-center mt-4 text-xl text-[#8288a1] underline underline-offset-4">
+        </button>
+        <button className="btn btn-ghost text-xl text-[#8288a1] underline underline-offset-4">
           SIGN IN
-        </div>
+        </button>
       </div>
     </div>
   );
