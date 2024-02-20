@@ -28,7 +28,7 @@ export default function ExperiencePage() {
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="w-5 h-5 text-primary"
+                          className="w-5 h-5 text-[#6385FD]"
                         >
                           <path
                             fillRule="evenodd"
@@ -37,16 +37,16 @@ export default function ExperiencePage() {
                           />
                         </svg>
                       </div>
-                      <hr className="bg-primary" />
+                      <hr className="bg-[#6385FD]" />
                     </li>
                     <li>
-                      <hr className="bg-primary" />
+                      <hr className="bg-[#6385FD]" />
                       <div className="timeline-middle">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="w-5 h-5 text-primary"
+                          className="w-5 h-5 text-[#6385FD]"
                         >
                           <path
                             fillRule="evenodd"
@@ -58,10 +58,10 @@ export default function ExperiencePage() {
                       <div className="timeline-end timeline-box w-[130px] h-[42px]">
                         <input className="w-full h-full text-xs text-center hover:border-2 hover:border-primary" />
                       </div>
-                      <hr className="bg-primary" />
+                      <hr className="bg-[#6385FD]" />
                     </li>
                     <li>
-                      <hr className="bg-primary" />
+                      <hr className="bg-[#6385FD]" />
                       <div className="timeline-start timeline-box w-[130px] h-[42px] ">
                         <input className="w-full h-full text-xs text-center hover:border-2 hover:border-primary" />
                       </div>
@@ -70,7 +70,7 @@ export default function ExperiencePage() {
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="w-5 h-5 text-primary"
+                          className="w-5 h-5 text-[#6385FD]"
                         >
                           <path
                             fillRule="evenodd"
@@ -93,7 +93,7 @@ export default function ExperiencePage() {
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="w-5 h-5 text-primary"
+                          className="w-5 h-5 text-[#6385FD]"
                         >
                           <path
                             fillRule="evenodd"
@@ -102,16 +102,16 @@ export default function ExperiencePage() {
                           />
                         </svg>
                       </div>
-                      <hr className="bg-primary" />
+                      <hr className="bg-[#6385FD]" />
                     </li>
                     <li>
-                      <hr className="bg-primary" />
+                      <hr className="bg-[#6385FD]" />
                       <div className="timeline-middle">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="w-5 h-5 text-primary"
+                          className="w-5 h-5 text-[#6385FD]"
                         >
                           <path
                             fillRule="evenodd"
@@ -123,10 +123,10 @@ export default function ExperiencePage() {
                       <div className="timeline-end timeline-box w-[130px] h-[42px]">
                         <input className="w-full h-full text-xs text-center hover:border-2 hover:border-primary" />
                       </div>
-                      <hr className="bg-primary" />
+                      <hr className="bg-[#6385FD]" />
                     </li>
                     <li>
-                      <hr className="bg-primary" />
+                      <hr className="bg-[#6385FD]" />
                       <div className="timeline-start timeline-box w-[130px] h-[42px]">
                         <input className="w-full h-full text-xs text-center hover:border-2 hover:border-primary" />
                       </div>
@@ -135,7 +135,7 @@ export default function ExperiencePage() {
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="w-5 h-5 text-primary"
+                          className="w-5 h-5 text-[#6385FD]"
                         >
                           <path
                             fillRule="evenodd"
@@ -144,7 +144,6 @@ export default function ExperiencePage() {
                           />
                         </svg>
                       </div>
-                      <hr />
                     </li>
                   </ul>
                 </div>
