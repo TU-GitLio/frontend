@@ -18,7 +18,7 @@ export default function WorksPage() {
               <div className="flex flex-col justify-around h-full">
                 <div className="flex flex-row justify-around items-center">
                   <div className="flex flex-row justify-center items-center">
-                    <div className="w-96 h-72 border-4 border-primary">
+                    <div className="w-96 h-72 border-4 border-blue-300">
                       <div className="flex flex-row h-full justify-between items-center">
                         <div className="ml-2 cursor-pointer">
                           <svg
@@ -76,15 +76,35 @@ export default function WorksPage() {
                     </div>
                   </div>
                   <div className="flex flex-row justify-center">
-                    <div className="w-96 h-72 border-4 border-primary"></div>
+                    <div className="w-96 h-72 border-4 border-blue-300"></div>
                   </div>
                 </div>
                 <div className="flex flex-row justify-around">
                   <div className="flex flex-row justify-center">
-                    <div className="w-96 h-72 border-4 border-primary"></div>
+                    <div className="w-96 h-72 border-4 border-blue-300"></div>
                   </div>
                   <div className="flex flex-row justify-center">
-                    <div className="w-96 h-72 border-4 border-primary"></div>
+                    <div className="w-96 h-72 border-4 border-blue-300">
+                      <div className="flex flex-row justify-center items-center h-full">
+                        <div className="flex flex-col justify-around items-center">
+                          <div className="flex flex-col justify-between">
+                            <div className="h-4 text-sm text-gray-400">
+                              타이틀 설명
+                            </div>
+                            <div className="h-4 text-sm text-gray-400 mt-1 mb-2">
+                              프로젝트 설명
+                            </div>
+                          </div>
+                          <div className="w-48 h-24 border-4 border-primary rounded-2xl"></div>
+                          <hr className="w-[250px] border-2 border-gray-400 mt-3" />
+                          <div className="flex flex-col justify-center rounded-2xl items-center border-4 border-primary w-48 h-24 mt-2">
+                            <div className="h-4 text-sm text-gray-400">
+                              사용기능 설명
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
