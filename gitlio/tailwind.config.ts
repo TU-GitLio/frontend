@@ -33,6 +33,6 @@ const config: Config = {
     },
     mode: "jit",
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 export default config;
