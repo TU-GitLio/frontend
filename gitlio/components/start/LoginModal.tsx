@@ -14,7 +14,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => {
           </button>
         </form>
         <div>
-          <div className="text-xl mb-2">LOGIN</div>
+          <div className="text-2xl font-bold mb-5">GITLIO 로그인</div>
           <label className="input input-bordered flex items-center gap-2 mb-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,6 +42,9 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => {
             </svg>
             <input type="password" className="grow" placeholder="Password" />
           </label>
+          <div className="mb-4">
+            <div>회원가입</div>
+          </div>
           <button className="btn btn-outline btn-info">로그인</button>
         </div>
       </div>

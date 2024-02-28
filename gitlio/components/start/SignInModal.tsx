@@ -14,7 +14,7 @@ const SignInModal: React.FC<SignInModalProps> = ({ onClose }) => {
           </button>
         </form>
         <div>
-          <div className="text-xl mb-2">SIGNIN</div>
+          <div className="text-2xl font-bold mb-5">GITLIO 회원가입</div>
           <label className="input input-bordered flex items-center gap-2 mb-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,6 +53,10 @@ const SignInModal: React.FC<SignInModalProps> = ({ onClose }) => {
             </svg>
             <input type="password" className="grow" placeholder="Password" />
           </label>
+          <div className="mb-4">
+            <span>이미 계정이 있으신가요? </span>
+            <a>로그인</a>
+          </div>
           <button className="btn btn-outline btn-info">회원가입</button>
         </div>
       </div>
