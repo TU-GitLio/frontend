@@ -1,7 +1,7 @@
 export default function DashNavbar() {
   return (
     <>
-      <div className="navbar bg-gray-50 border-solid">
+      <div className="navbar  border border-gray-200">
         <div className="flex-1">
           <a className="btn btn-ghost text-xl">Dashboard</a>
         </div>
