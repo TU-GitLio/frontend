@@ -1,4 +1,4 @@
-export default function DashNavbar() {
+export default function StdNavbar() {
   return (
     <>
       <div className="navbar  border border-gray-200">
