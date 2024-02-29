@@ -1,5 +1,5 @@
-import Navbar from "../../../components/dashboard/DashNavbar";
-import Sidebar from "../../../components/dashboard/DashSidebar";
+import Navbar from "../../../../components/dashboard/DashNavbar";
+import Sidebar from "../../../../components/dashboard/DashSidebar";
 
 export default function DashboardPage() {
   return (
