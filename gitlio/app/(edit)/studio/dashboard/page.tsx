@@ -8,7 +8,7 @@ export default function DashboardPage() {
 
       <div className="flex flex-col flex-1">
         <Navbar />
-        <main className="flex-1 p-4">메인 컨텐츠 영역</main>
+        <div className="flex-1 p-4">메인 컨텐츠 영역</div>
       </div>
     </div>
   );
