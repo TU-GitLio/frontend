@@ -1,6 +1,20 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import PostModal from "../../components/Studio/PostEditModal";
 
 function PostList() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalInfo, setModalInfo] = useState({ title: "", url: "" });
+
+  const openModal = (title: string, url: string) => {
+    setModalInfo({ title, url });
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <>
       <div className="overflow-x-auto">
@@ -12,10 +26,17 @@ function PostList() {
                 <input
                   type="checkbox"
                   value="synthwave"
-                  className="toggle theme-controller bg-amber-300 border-sky-400 [--tglbg:theme(colors.sky.500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:theme(colors.blue.900)] row-start-1 col-start-1 col-span-2"
+                  className="toggle theme-controller bg-white border-sky-400 [--tglbg:theme(colors.sky.500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:theme(colors.blue.900)] row-start-1 col-start-1 col-span-2"
                 />
               </th>
-              <td>
+              <td
+                onClick={() =>
+                  openModal(
+                    "프론트엔드 개발자 포트폴리오",
+                    "https://www.gitlio.com/abcd-portfolio"
+                  )
+                }
+              >
                 <div className="text-xs">프론트엔드 개발자 포트폴리오</div>
                 <div className="text-lg">
                   https://www.gitlio.com/abcd-portfolio
@@ -33,10 +54,17 @@ function PostList() {
                 <input
                   type="checkbox"
                   value="synthwave"
-                  className="toggle theme-controller bg-amber-300 border-sky-400 [--tglbg:theme(colors.sky.500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:theme(colors.blue.900)] row-start-1 col-start-1 col-span-2"
+                  className="toggle theme-controller bg-white border-sky-400 [--tglbg:theme(colors.sky.500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:theme(colors.blue.900)] row-start-1 col-start-1 col-span-2"
                 />
               </th>
-              <td>
+              <td
+                onClick={() =>
+                  openModal(
+                    "프론트엔드 개발자 포트폴리오",
+                    "https://www.gitlio.com/abcd-portfolio"
+                  )
+                }
+              >
                 <div className="text-xs">엘리스 맞춤 포트폴리오</div>
                 <div className="text-lg">
                   https://www.gitlio.com/efgh-portfolio
@@ -54,10 +82,17 @@ function PostList() {
                 <input
                   type="checkbox"
                   value="synthwave"
-                  className="toggle theme-controller bg-amber-300 border-sky-400 [--tglbg:theme(colors.sky.500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:theme(colors.blue.900)] row-start-1 col-start-1 col-span-2"
+                  className="toggle theme-controller bg-white border-sky-400 [--tglbg:theme(colors.sky.500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:theme(colors.blue.900)] row-start-1 col-start-1 col-span-2"
                 />
               </th>
-              <td>
+              <td
+                onClick={() =>
+                  openModal(
+                    "프론트엔드 개발자 포트폴리오",
+                    "https://www.gitlio.com/abcd-portfolio"
+                  )
+                }
+              >
                 <div className="text-xs">컴공 전공 포트폴리오</div>
                 <div className="text-lg">
                   https://www.gitlio.com/ijklmn-portfolio
@@ -71,6 +106,14 @@ function PostList() {
           </tbody>
         </table>
       </div>
+      {isModalOpen && (
+        <PostModal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          title={modalInfo.title}
+          url={modalInfo.url}
+        />
+      )}
     </>
   );
 }
