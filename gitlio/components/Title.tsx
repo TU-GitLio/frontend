@@ -18,10 +18,10 @@ export default function Title() {
               </span>
             </div>
             <div className="flex flex-row h-full items-center">
-              <div className="flex flex-col justify-center rounded-xl items-center w-24 h-12 border-4 bg-blue-500 text-white">
+              <div className="flex flex-col cursor-pointer justify-center rounded-xl items-center w-24 h-12 border-4 bg-blue-500 text-white">
                 Preview
               </div>
-              <div className="flex flex-col justify-center rounded-xl items-center w-24 h-12 border-4 bg-blue-500 text-white">
+              <div className="flex flex-col cursor-pointer justify-center rounded-xl items-center w-24 h-12 border-4 bg-blue-500 text-white">
                 Save
               </div>
             </div>
