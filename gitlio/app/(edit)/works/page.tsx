@@ -3,6 +3,8 @@ import Header from "@/components/EditHeader";
 import SideBar from "@/components/SideBar";
 import Title from "@/components/Title";
 import { FaTrash } from "react-icons/fa";
+import { FaRegArrowAltCircleLeft } from "react-icons/fa";
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 export default function WorksPage() {
   return (
@@ -40,7 +42,9 @@ export default function WorksPage() {
                     </div>
                   </div>
                   <div className="flex w-[100%] flex-row justify-around">
-                    <div className="flex flex-col justify-center">hi</div>
+                    <div className="flex flex-col justify-center">
+                      <FaRegArrowAltCircleLeft />
+                    </div>
                     <div className="flex w-[80%] items-center flex-col justify-center">
                       <div
                         className="w-full lg:h-[25%] xl:h-11 bg-[#D6E2FE] lg:rounded-lg xl:rounded-2xl mt-2 flex items-center justify-center font-bold"
@@ -67,7 +71,9 @@ export default function WorksPage() {
                         · AWS EC2 서버 배포 <br />
                       </div>
                     </div>
-                    <div className="flex flex-col justify-center">hi</div>
+                    <div className="flex flex-col justify-center">
+                      <FaRegArrowAltCircleRight />
+                    </div>
                   </div>
                 </div>
               </div>
