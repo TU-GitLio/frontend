@@ -43,7 +43,7 @@ export default function StdSidebar() {
           </a>
         </Link>
 
-        <Link href="/studio/statistics" legacyBehavior>
+        <Link href="/studio/statistics/insight" legacyBehavior>
           <a
             className={`btn btn-wide my-2 flex items-center gap-2 justify-start ${
               isActive("/studio/statistics")

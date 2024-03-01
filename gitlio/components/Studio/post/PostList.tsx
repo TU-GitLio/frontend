@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import PostModal from "../../components/Studio/PostEditModal";
+import PostModal from "./PostEditModal";
 
 function PostList() {
   const [isModalOpen, setIsModalOpen] = useState(false);

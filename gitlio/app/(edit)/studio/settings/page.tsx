@@ -1,5 +1,5 @@
-import Navbar from "../../../../components/Studio/StdNavbar";
-import Sidebar from "../../../../components/Studio/StdSidebar";
+import Navbar from "../../../../components/studio/StdNavbar";
+import Sidebar from "../../../../components/studio/StdSidebar";
 
 export default function SettingPage() {
   return (
