@@ -1,8 +1,25 @@
+"use client";
+import { usePathname } from "next/navigation";
+
 export default function StdNavbar() {
+  const pathname = usePathname();
+
+  const getNavbarText = () => {
+    if (pathname.includes("/studio/statistics")) {
+      return "Statistics";
+    } else if (pathname.includes("/studio/posts")) {
+      return "Posts";
+    } else if (pathname.includes("/studio/settings")) {
+      return "Settings";
+    }
+    // 기본 텍스트
+    return "Dashboard";
+  };
+
   return (
     <div className="navbar  border border-gray-200">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">Dashboard</a>
+        <a className="btn btn-ghost text-xl">{getNavbarText()}</a>
       </div>
       <div className="flex-none gap-2">
         <div className="dropdown dropdown-end">
