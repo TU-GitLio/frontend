@@ -2,9 +2,9 @@ import EditBuilder from "@/components/EditBuilder";
 import Header from "@/components/EditHeader";
 import SideBar from "@/components/SideBar";
 import Title from "@/components/Title";
-import { FaTrash } from "react-icons/fa";
-import { FaRegArrowAltCircleLeft } from "react-icons/fa";
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { PiTrashThin } from "react-icons/pi";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
 export default function WorksPage() {
   return (
@@ -15,69 +15,73 @@ export default function WorksPage() {
         </div>
         <Header />
         <div className="col-span-3 row-span-8 h-full bg-[#DCE6FF] border border-[#B1C9FF]">
-          <div className="flex flex-col h-full items-center px-5 ">
-            <Title />
-            <EditBuilder>
-              <div className="flex w-full h-full flex-col items-center justify-center rounded-2xl">
-                <div className="flex h-[95%] w-[100%] flex-col justify-center items-center border-2 border-primary rounded-2xl">
-                  <div className="flex flex-row justify-end w-full mb-3">
-                    <div className="flex flex-row items-center justify-center rounded-full w-20 h-20 mr-5">
-                      <img
-                        src="/Chatgpt_btn_img.png"
-                        alt="Profile"
-                        className="lg:h-[65%] lg:w-[90%] xl:h-[70%] xl:w-full"
-                      />
-                    </div>
-                    <div className="flex flex-row items-center justify-center rounded-full mr-[10%]">
-                      <FaTrash />
-                    </div>
-                  </div>
-                  <div className="flex w-[80%] px-1 py-1 items-center justify-center bg-[#DCE6FF] lg:rounded-lg xl:rounded-2xl ">
-                    <div className="flex items-center justify-center ">
-                      <img
-                        src="/Aiary_img.png"
-                        alt="Profile"
-                        className="lg:h-[45%] lg:w-[60%] xl:h-[80%] xl:w-[100%] object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex w-[100%] flex-row justify-around">
-                    <div className="flex flex-col justify-center">
-                      <FaRegArrowAltCircleLeft />
-                    </div>
-                    <div className="flex w-[80%] items-center flex-col justify-center">
-                      <div
-                        className="w-full lg:h-[25%] xl:h-11 bg-[#D6E2FE] lg:rounded-lg xl:rounded-2xl mt-2 flex items-center justify-center font-bold"
-                        style={{ fontSize: "0.9rem" }}
-                      >
-                        AIARY
+          <div className="flex flex-row h-full w-full justify-around items-center">
+            <div className="flex flex-col justify-center items-center w-14 h-14 ml-10">
+              <IoIosArrowBack className="w-full h-full cursor-pointer" />
+            </div>
+            <div className="flex flex-col w-full h-full items-center">
+              <Title />
+              <EditBuilder>
+                <div className="flex w-full h-full flex-col items-center justify-center rounded-2xl">
+                  <div className="flex h-[95%] w-[100%] flex-col justify-center items-center border-2 border-primary rounded-2xl">
+                    <div className="flex flex-row justify-end w-full mb-3">
+                      <div className="flex flex-row items-center cursor-pointer justify-center rounded-full mr-5">
+                        <img
+                          src="/Chatgpt_btn_img.png"
+                          alt="Profile"
+                          className="lg:h-[65%] lg:w-[90%] xl:h-[70%] xl:w-full"
+                        />
                       </div>
-                      <div
-                        className="w-full lg:h-[25%] xl:h-11 bg-[#D6E2FE] lg:rounded-lg xl:rounded-2xl mt-2 flex items-center justify-center font-bold"
-                        style={{ fontSize: "0.9rem" }}
-                      >
-                        일기 내용 기반 AI 분석 그림일기 서비스
-                      </div>
-                      <div
-                        className="w-full lg:h-[65%] bg-[#D6E2FE] py-1 px-2 lg:rounded-lg xl:rounded-2xl mt-2 flex items-center justify-center font-bold"
-                        style={{ fontSize: "0.8rem" }}
-                      >
-                        · Spring Boot JPA를 이용하여 반복 작업을 최소화 <br />
-                        · AWS S3 업로드 및 이미지 URL 반환 로직 구현 <br />·
-                        Spring Security와 JWT를 이용하여 유저 인증, 인가 구현{" "}
-                        <br />
-                        · RabbitMQ를 통한 이벤트 기반 비동기 처리 및 Celery를
-                        활용한 작업 관리 <br />
-                        · AWS EC2 서버 배포 <br />
+                      <div className="flex flex-row items-center justify-center rounded-full mr-[10%]">
+                        <div className="w-8 h-8 flex flex-row justify-center items-center rounded-md border-2 border-gray-200">
+                          <PiTrashThin className="border-gray-200 cursor-pointer" />
+                        </div>
                       </div>
                     </div>
-                    <div className="flex flex-col justify-center">
-                      <FaRegArrowAltCircleRight />
+                    <div className="flex w-[80%] px-1 py-1 items-center justify-center bg-[#DCE6FF] lg:rounded-lg xl:rounded-2xl ">
+                      <div className="flex items-center justify-center ">
+                        <img
+                          src="/Aiary_img.png"
+                          alt="Profile"
+                          className="lg:h-[45%] lg:w-[60%] xl:h-[80%] xl:w-[100%] object-cover"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex w-[100%] flex-row justify-around">
+                      <div className="flex w-[80%] items-center flex-col justify-center">
+                        <div
+                          className="w-full lg:h-[25%] xl:h-11 bg-[#D6E2FE] lg:rounded-lg xl:rounded-2xl mt-2 flex items-center justify-center font-bold"
+                          style={{ fontSize: "0.9rem" }}
+                        >
+                          AIARY
+                        </div>
+                        <div
+                          className="w-full lg:h-[25%] xl:h-11 bg-[#D6E2FE] lg:rounded-lg xl:rounded-2xl mt-2 flex items-center justify-center font-bold"
+                          style={{ fontSize: "0.9rem" }}
+                        >
+                          일기 내용 기반 AI 분석 그림일기 서비스
+                        </div>
+                        <div
+                          className="w-full lg:h-[65%] bg-[#D6E2FE] py-1 px-2 lg:rounded-lg xl:rounded-2xl mt-2 flex items-center justify-center font-bold"
+                          style={{ fontSize: "0.8rem" }}
+                        >
+                          · Spring Boot JPA를 이용하여 반복 작업을 최소화 <br />
+                          · AWS S3 업로드 및 이미지 URL 반환 로직 구현 <br />·
+                          Spring Security와 JWT를 이용하여 유저 인증, 인가 구현{" "}
+                          <br />
+                          · RabbitMQ를 통한 이벤트 기반 비동기 처리 및 Celery를
+                          활용한 작업 관리 <br />
+                          · AWS EC2 서버 배포 <br />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </EditBuilder>
+              </EditBuilder>
+            </div>
+            <div className="flex flex-col justify-center items-center w-14 h-14 mr-10">
+              <IoIosArrowForward className="w-full h-full cursor-pointer" />
+            </div>
           </div>
         </div>
 
