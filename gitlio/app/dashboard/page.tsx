@@ -1,2 +1,1 @@
-t function DashboardPage() {
-}
+function DashboardPage() {}
