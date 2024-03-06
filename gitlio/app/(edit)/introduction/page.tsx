@@ -15,10 +15,10 @@ export default function IntroductionPage() {
           </div>
         </div>
         <div className="col-span-4 row-span-1 h-screen bg-purple-400 border border-primary flex-col-reverse relative">
-          <div className="col-span-4 row-span-1 h-[80px] bg-[#8dabed] border absolute top-0 left-0 right-0 bottom-0 border-primary z-10">
-            <Header />
+          <div className="col-span-4 row-span-1 h-[80px] bg-[#8dabed] border absolute top-0 left-0 right-0 bottom-0 border-[#B1C9FF] z-10">
+            <EditHeader />
           </div>
-          <div className="flex h-screen bg-[#DCE6FF] border border-primary z-1">
+          <div className="flex h-screen bg-[#DCE6FF] border border-[#B1C9FF] z-1">
             <div className="flex flex-col items-center bg-[#DCE6FF] justify-center rounded-[10px] col-span-3 w-[70%] lg:h-[85%] xl:h-[90%] lg:mt-[8%] xl:mt-[5.5%] ml-5 border border-primary mr-auto">
               <Title />
               <EditBuilder>
