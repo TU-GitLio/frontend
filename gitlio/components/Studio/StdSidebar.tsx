@@ -1,10 +1,15 @@
 "use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import NewFolioModal from "@/components/studio/GitInputModal";
 
 export default function StdSidebar() {
   const pathname = usePathname();
   const isActive = (paths: any) => paths.includes(pathname);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => setIsModalOpen(!isModalOpen);
 
   return (
     <div className="h-full w-72 border border-gray-200">
@@ -20,10 +25,15 @@ export default function StdSidebar() {
       </div>
       <div className="mt-4 flex flex-col items-center">
         <div className="flex justify-center">
-          <button className="btn btn-wide bg-[#3379FF] text-white">
+          <button
+            className="btn btn-wide bg-[#3379FF] text-white"
+            onClick={toggleModal}
+          >
             새로운 포트폴리오 생성
           </button>
         </div>
+        {isModalOpen && <NewFolioModal onClose={toggleModal} />}
+
         <div className="divider w-full"></div>
 
         <Link href="/studio/dashboard" legacyBehavior>
