@@ -9,17 +9,17 @@ export default function IntroductionPage() {
     <>
       <div className="w-screen h-screen bg-[#c5f0c0] grid grid-cols-5">
         <div className="h-screen relative">
-          <div className="col-span-1 row-span-10 w-130 h-full bg-[#8d9ab8] border border-red-400">
+          <div className="col-span-1 row-span-10 w-130 h-full bg-[#8d9ab8] border border-primary">
             {/* <p className="text-white">왼쪽 사이드 내용</p> */}
             <SideBar />
           </div>
         </div>
-        <div className="col-span-4 row-span-1 h-screen bg-purple-400 border border-purple-800 flex-col-reverse relative">
-          <div className="col-span-4 row-span-1 h-[80px] bg-[#8dabed] border absolute top-0 left-0 right-0 bottom-0 border-purple-800 z-10">
+        <div className="col-span-4 row-span-1 h-screen bg-purple-400 border border-primary flex-col-reverse relative">
+          <div className="col-span-4 row-span-1 h-[80px] bg-[#8dabed] border absolute top-0 left-0 right-0 bottom-0 border-primary z-10">
             <Header />
           </div>
-          <div className="flex h-screen bg-[#DCE6FF] border border-green-400 z-1">
-            <div className="flex flex-col items-center bg-[#DCE6FF] justify-center rounded-[10px] col-span-3 w-[70%] lg:h-[85%] xl:h-[90%] lg:mt-[8%] xl:mt-[5.5%] ml-5 border border-black mr-auto">
+          <div className="flex h-screen bg-[#DCE6FF] border border-primary z-1">
+            <div className="flex flex-col items-center bg-[#DCE6FF] justify-center rounded-[10px] col-span-3 w-[70%] lg:h-[85%] xl:h-[90%] lg:mt-[8%] xl:mt-[5.5%] ml-5 border border-primary mr-auto">
               <Title />
               <EditBuilder>
                 <div className="flex w-full h-full flex-col items-center justify-center rounded-2xl">
@@ -45,7 +45,7 @@ export default function IntroductionPage() {
                 </div>
               </EditBuilder>
             </div>
-            <div className="col-span-1 lg:h-[85%] w-[25%] xl:h-[90%] rounded-[10px] lg:mt-[8%] xl:mt-[5.5%] mr-5 items-center justify-center bg-[#DCE6FF] border border-black ml-auto">
+            <div className="col-span-1 lg:h-[85%] w-[25%] xl:h-[90%] rounded-[10px] lg:mt-[8%] xl:mt-[5.5%] mr-5 items-center justify-center bg-[#DCE6FF] border border-primary ml-auto">
               <div className="w-[90%] h-[90%] bg-[#BFCBF6] rounded-[30px] mt-[10%] flex justify-center ml-3">
                 <div className="w-[40%] h-[23%] bg-[#6385FD] rounded-[20px] flex  items-center text-center justify-center ml-0 mt-10 text-white">
                   레이아웃1
