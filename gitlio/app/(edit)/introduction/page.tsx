@@ -17,7 +17,6 @@ export default function IntroductionPage() {
 
         <div className="col-span-4 row-span-1 h-screen bg-purple-400 border border-purple-800 flex-col-reverse relative">
           <div className="col-span-4 row-span-1 h-[80px] bg-[#8dabed] border absolute top-0 left-0 right-0 bottom-0 border-purple-800 z-10">
-
             <EditHeader />
           </div>
           <div className="flex h-screen bg-[#DCE6FF] border border-[#B1C9FF] z-1">
