@@ -16,8 +16,8 @@ function PostList() {
   };
 
   return (
-    <>
-      <div className="overflow-x-auto">
+    <div>
+      <div className="overflow-x-auto -mt-2">
         <table className="table">
           <tbody>
             {/* row 1 */}
@@ -114,7 +114,7 @@ function PostList() {
           url={modalInfo.url}
         />
       )}
-    </>
+    </div>
   );
 }
 

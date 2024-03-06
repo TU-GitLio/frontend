@@ -30,7 +30,7 @@ export default function StdSidebar() {
           <a
             className={`btn btn-wide my-2 flex items-center gap-2 justify-start ${
               isActive("/studio/dashboard")
-                ? "bg-[#B1C9FF] text-black"
+                ? "bg-[#F5F5F7] text-black"
                 : "btn-ghost"
             }`}
           >
@@ -46,8 +46,13 @@ export default function StdSidebar() {
         <Link href="/studio/statistics/insight" legacyBehavior>
           <a
             className={`btn btn-wide my-2 flex items-center gap-2 justify-start ${
-              isActive("/studio/statistics")
-                ? "bg-[#B1C9FF] text-black"
+              isActive([
+                "/studio/statistics/insight",
+                "/studio/statistics/daily",
+                "/studio/statistics/monthly",
+                "/studio/statistics/all",
+              ])
+                ? "bg-[#F5F5F7] text-black"
                 : "btn-ghost"
             }`}
           >
@@ -69,7 +74,7 @@ export default function StdSidebar() {
                 "/studio/posts/drafts",
                 "/studio/posts/trash",
               ])
-                ? "bg-[#B1C9FF] text-black"
+                ? "bg-[#F5F5F7] text-black"
                 : "btn-ghost"
             }`}
           >
@@ -87,7 +92,7 @@ export default function StdSidebar() {
           <a
             className={`btn btn-wide my-2 flex items-center gap-2 justify-start ${
               isActive("/studio/settings")
-                ? "bg-[#B1C9FF] text-black"
+                ? "bg-[#F5F5F7] text-black"
                 : "btn-ghost"
             }`}
           >
