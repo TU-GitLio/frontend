@@ -13,7 +13,7 @@ export default function StdSidebar() {
 
   return (
     <div className="h-full w-72 border border-gray-200">
-      <div className="flex h-[4.15rem] items-center justify-center w-full border border-gray-200">
+      <div className="flex h-[4.15rem] items-center justify-center w-full border-b border-gray-200">
         <div className="flex items-center justify-center gap-2 text-xl font-bold text-center">
           <img
             alt="gitlio studio logo"
@@ -23,18 +23,18 @@ export default function StdSidebar() {
           GITLIO STUDIO
         </div>
       </div>
-      <div className="mt-4 flex flex-col items-center">
-        <div className="flex justify-center">
-          <button
-            className="btn btn-wide bg-[#3379FF] text-white"
-            onClick={toggleModal}
-          >
-            새로운 포트폴리오 생성
-          </button>
+      <div className="mt-4 flex flex-col items-center ">
+        <div className="border-b border-gray-200 w-full">
+          <div className="flex justify-center ">
+            <button
+              className="btn btn-wide bg-[#3379FF] text-white mb-4"
+              onClick={toggleModal}
+            >
+              새로운 포트폴리오 생성
+            </button>
+          </div>
         </div>
         {isModalOpen && <NewFolioModal onClose={toggleModal} />}
-
-        <div className="divider w-full"></div>
 
         <Link href="/studio/dashboard" legacyBehavior>
           <a

@@ -43,14 +43,14 @@ const sampleData: Data[] = [
   },
 ];
 
+const defaultImage = "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png";
+
 function Page() {
   const [repositoryUrls, setRepositoryUrls] = useState([]);
   const [selectedUrl, setSelectedUrl] = useState("");
   const [selectedData, setSelectedData] = useState<Data | null>(null);
-  const [selectedImage, setSelectedImage] = useState(
-    "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png"
-  );
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [displayedImage, setDisplayedImage] = useState<string>(defaultImage);
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
   // 로컬 스토리지에서 URL 목록 불러오기
   useEffect(() => {
@@ -63,12 +63,29 @@ function Page() {
   // 선택된 URL에 해당하는 데이터 찾기
   useEffect(() => {
     const data = sampleData.find((data) => data.url === selectedUrl);
-    setSelectedData(data ?? null); // data가 undefined일 경우 null을 할당
+    setSelectedData(data ?? null);
+
+    const selectedImages = JSON.parse(
+      localStorage.getItem("selectedImages") || "{}"
+    );
+    const imageUrl = selectedImages[selectedUrl] || defaultImage;
+    // URL 변경 시 화면에 표시되는 이미지도 업데이트
+    setDisplayedImage(imageUrl);
   }, [selectedUrl]);
 
   const handleImageSelect = (image: string) => {
-    setSelectedImage(image);
+    // 이미지 선택 시 즉시 화면에 반영
+    setDisplayedImage(image);
     setModalIsOpen(false);
+  };
+
+  const handleSave = () => {
+    // "저장" 버튼 클릭 시 선택된 이미지를 로컬 스토리지에 저장
+    const selectedImages = JSON.parse(
+      localStorage.getItem("selectedImages") || "{}"
+    );
+    selectedImages[selectedUrl] = displayedImage;
+    localStorage.setItem("selectedImages", JSON.stringify(selectedImages));
   };
 
   return (
@@ -92,19 +109,20 @@ function Page() {
       </div>
       {selectedData && (
         <div className="mt-4">
-          <h3 className="text-lg font-semibold">이미지:</h3>
-          <img
-            src={selectedImage}
-            alt="기본 이미지"
-            className="w-full h-auto cursor-pointer mt-4"
-            onClick={() => setModalIsOpen(true)}
-          />
-          <ImageSelectionModal
-            isOpen={modalIsOpen}
-            onClose={() => setModalIsOpen(false)}
-            onSelect={handleImageSelect}
-            images={selectedData.images}
-          />
+          <div>
+            <img
+              src={displayedImage}
+              alt="Selected image"
+              className="w-full h-auto cursor-pointer mt-4"
+              onClick={() => setModalIsOpen(true)}
+            />
+            <ImageSelectionModal
+              isOpen={modalIsOpen}
+              onClose={() => setModalIsOpen(false)}
+              onSelect={handleImageSelect}
+              images={selectedData ? selectedData.images : []}
+            />
+          </div>
           <h3 className="text-lg font-semibold mt-4">문장:</h3>
           <div>
             {selectedData.sentences.map((sentence, index) => (
@@ -116,7 +134,9 @@ function Page() {
           </div>
         </div>
       )}
-      <button className="btn btn-info mt-8 mb-4">저장</button>
+      <button className="btn btn-info mt-8 mb-4" onClick={handleSave}>
+        저장
+      </button>
     </div>
   );
 }

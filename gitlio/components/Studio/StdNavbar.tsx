@@ -17,7 +17,7 @@ export default function StdNavbar() {
   };
 
   return (
-    <div className="navbar  border border-gray-200">
+    <div className="navbar border-b border-gray-200">
       <div className="flex-1">
         <a className="btn btn-ghost text-xl">{getNavbarText()}</a>
       </div>
