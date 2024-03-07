@@ -35,7 +35,7 @@ export default function SkillsPage() {
         </div>
 
         <div className="flex flex-col justify-center items-center col-span-1 row-span-8 h-full bg-[#DCE6FF] border border-#B1C9FF]">
-          <div className="w-[90%] h-4/5 bg-[#BFCBF6] rounded-[30px] flex flex-col items-center justify-between">
+          <div className="w-[90%] h-[90%] bg-[#BFCBF6]  lg:rounded-[20px] rounded-[30px] flex flex-col items-center justify-between">
             <div className="flex flex-row justify-evenly items-center mt-5">
               <input
                 className="block w-4/5 rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-#B1C9FF] focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"

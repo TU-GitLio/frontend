@@ -86,7 +86,7 @@ export default function WorksPage() {
         </div>
 
         <div className="flex justify-center items-center col-span-1 row-span-8 h-full bg-primary border border-primary">
-          <div className="flex flex-col lg:w-[60%] lg:h-[90%] bg-[#BFCBF6]  lg:rounded-[25px] xl:rounded-[30px] items-center">
+          <div className="flex flex-col lg:w-[60%] lg:h-[90%] bg-[#BFCBF6]  lg:rounded-[20px] xl:rounded-[30px] items-center">
             <div className="w-[60%] h-[20%] bg-[#6385FD] lg:rounded-[15px] xl:rounded-[20px] flex items-center text-center justify-center lg:mt-[11.5%] text-white font-medium">
               프로젝트1
             </div>
