@@ -33,9 +33,9 @@ export default function WorksPage() {
                         />
                       </div>
                       <div className="flex flex-row items-center justify-center rounded-full mr-[10%]">
-                        <div className="w-8 h-8 flex flex-row justify-center items-center rounded-md border-2 border-gray-200">
+                        <button className="w-8 h-8 flex flex-row justify-center items-center rounded-md border-2 border-gray-200">
                           <PiTrashThin className="border-gray-200 cursor-pointer" />
-                        </div>
+                        </button>
                       </div>
                     </div>
                     <div className="flex w-[80%] px-1 py-1 items-center justify-center bg-[#DCE6FF] lg:rounded-lg xl:rounded-2xl ">
