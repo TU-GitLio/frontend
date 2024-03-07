@@ -23,6 +23,16 @@ const GitInputModal: React.FC<GitInputModalProps> = ({ onClose }) => {
     setInputs(newInputs);
   };
 
+  const handleSubmit = () => {
+    const allFilled = inputs.every((input) => input.trim() !== "");
+    if (allFilled) {
+      console.log(inputs);
+      window.location.href = "/new/project";
+    } else {
+      alert("모든 레포지토리 url을 입력해주세요.");
+    }
+  };
+
   return (
     <dialog open className="modal">
       <div className="modal-box">
@@ -34,13 +44,13 @@ const GitInputModal: React.FC<GitInputModalProps> = ({ onClose }) => {
         <div>
           <div className="text-2xl font-bold mb-5 ">
             깃허브 레포지토리 url 입력
-            <button onClick={addInput} className="btn btn-sm ml-2">
+            <button onClick={addInput} className="btn btn-sm btn-ghost ml-2">
               +
             </button>
           </div>
 
           {inputs.map((input, index) => (
-            <div key={index}>
+            <div key={index} className="flex items-center space-x-2">
               <input
                 type="text"
                 placeholder="Your Repository"
@@ -58,7 +68,9 @@ const GitInputModal: React.FC<GitInputModalProps> = ({ onClose }) => {
               )}
             </div>
           ))}
-          <button className="btn btn-success mt-3">프로젝트 요약 생성</button>
+          <button onClick={handleSubmit} className="btn btn-success mt-3">
+            프로젝트 요약 생성
+          </button>
         </div>
       </div>
       <form method="dialog" className="modal-backdrop">
