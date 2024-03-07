@@ -21,7 +21,7 @@ const config: Config = {
       sm: { max: "768px" },
       md: { max: "1023px" },
       lg: { min: "1023px" },
-      xl: { max: "1330px" },
+      xl: { min: "1300px" },
 
       //전서진: 1273.7px (13.3인치, 33.7cm) -> lg
       //정준영: 1440px (15인치, 38.1cm)     -> xl
