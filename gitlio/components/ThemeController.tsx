@@ -25,7 +25,7 @@ export default function ThemeController() {
   };
 
   return (
-    <div className="flex h-[65%]">
+    <div className="flex h-[65%] mr-5">
       <div
         className="bg-[#F3F3F3] md:p-1 lg:p-2 xl:p-3 xl:mt-2 w-full lg:h-full xl:h-[80%] lg:border-2 xl:border-4 border-[#2463EB] lg:rounded-xl xl:rounded-2xl"
         onClick={toggleTheme}
