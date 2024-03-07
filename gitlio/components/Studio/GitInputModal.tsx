@@ -26,10 +26,10 @@ const GitInputModal: React.FC<GitInputModalProps> = ({ onClose }) => {
   const handleSubmit = () => {
     const allFilled = inputs.every((input) => input.trim() !== "");
     if (allFilled) {
-      console.log(inputs);
+      localStorage.setItem("repositoryUrls", JSON.stringify(inputs));
       window.location.href = "/new/project";
     } else {
-      alert("모든 레포지토리 url을 입력해주세요.");
+      alert("모든 레포지토리 URL을 입력해주세요.");
     }
   };
 
