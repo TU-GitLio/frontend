@@ -35,7 +35,7 @@ export default function OutroPage() {
 
         <div className="flex justify-center items-center col-span-1 row-span-8 h-full bg-primary border border-primary">
           <div className="w-[90%] h-[90%] bg-[#BFCBF6] lg:rounded-[20px] rounded-[30px] flex items-center justify-center flex-col">
-            <button className="w-[90%] h-[10%] bg-[#6385FD] lg:rounded-[15px] xl:rounded-[20px] flex items-center text-center justify-center ml-0 mt-5 text-white border-none outline-none cursor-pointer">
+            <button className="w-[90%] h-[10%] bg-[#6385FD] md:rounded-[10px] lg:rounded-[15px] xl:rounded-[20px] flex items-center text-center justify-center ml-0 mt-5 text-white border-none outline-none cursor-pointer">
               전체 미리보기
             </button>
             <>
