@@ -34,29 +34,29 @@ export default function OutroPage() {
         </div>
 
         <div className="flex justify-center items-center col-span-1 row-span-8 h-full bg-primary border border-primary">
-          <div className="w-[90%] h-[80%] bg-[#BFCBF6] rounded-[30px] flex items-center justify-center flex-col">
-            <button className="w-[90%] h-[10%] bg-[#6385FD] rounded-[20px] flex items-center text-center justify-center ml-0 mt-5 text-white border-none outline-none cursor-pointer">
+          <div className="w-[90%] h-[90%] bg-[#BFCBF6] lg:rounded-[20px] rounded-[30px] flex items-center justify-center flex-col">
+            <button className="w-[90%] h-[10%] bg-[#6385FD] lg:rounded-[15px] xl:rounded-[20px] flex items-center text-center justify-center ml-0 mt-5 text-white border-none outline-none cursor-pointer">
               전체 미리보기
             </button>
             <>
               <div className="h-full w-full overflow-y-auto">
                 <div className="grid grid-cols-2 h-full w-full grid-rows-3">
-                  <button className="w-[80%] h-[80%] bg-blue-200 rounded-[20px] flex items-center text-center justify-center ml-4 mt-5">
+                  <button className="w-[80%] h-[80%] bg-blue-200  rounded-[20px] flex items-center text-center justify-center ml-4 lg:mt-4 xl:mt-5">
                     테마1
                   </button>
-                  <button className="w-[80%] h-[80%] bg-green-100 rounded-[20px] flex items-center text-center justify-center ml-4 mt-5">
+                  <button className="w-[80%] h-[80%] bg-green-100 rounded-[20px] flex items-center text-center justify-center ml-4 lg:mt-4 xl:mt-5">
                     테마2
                   </button>
-                  <button className="w-[80%] h-[80%] bg-pink-100 rounded-[20px] flex items-center text-center justify-center ml-4 mt-5">
+                  <button className="w-[80%] h-[80%] bg-pink-100 rounded-[20px] flex items-center text-center justify-center ml-4 lg:mt-2 xl:mt-5">
                     테마3
                   </button>
-                  <button className="w-[80%] h-[80%] bg-violet-200 rounded-[20px] flex items-center text-center justify-center ml-4 mt-5">
+                  <button className="w-[80%] h-[80%] bg-violet-200 rounded-[20px] flex items-center text-center justify-center ml-4 lg:mt-2 xl:mt-5">
                     테마4
                   </button>
-                  <button className="w-[80%] h-[80%] bg-yellow-100 rounded-[20px] flex items-center text-center justify-center ml-4 mt-5">
+                  <button className="w-[80%] h-[80%] bg-yellow-100 rounded-[20px] flex items-center text-center justify-center ml-4 lg:mt-1 xl:mt-5">
                     테마5
                   </button>
-                  <button className="w-[80%] h-[80%] bg-orange-100  rounded-[20px] flex items-center text-center justify-center ml-4 mt-5">
+                  <button className="w-[80%] h-[80%] bg-orange-100  rounded-[20px] flex items-center text-center justify-center ml-4 lg:mt-1 xl:mt-5">
                     테마6
                   </button>
                 </div>
