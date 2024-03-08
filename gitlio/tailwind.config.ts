@@ -32,6 +32,7 @@ const config: Config = {
       // xl: { min: "1300px" },
     },
     mode: "jit",
+    darkMode: "class",
   },
   plugins: [require("daisyui")],
 };
