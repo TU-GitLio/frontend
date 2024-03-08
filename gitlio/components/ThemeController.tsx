@@ -19,7 +19,7 @@ export default function ThemeController() {
         {/* Sun icon */}
         {darkMode ? (
           <svg
-            className={`swap-on fill-current text-blue-500 w-5 h-5`}
+            className={`swap-on fill-current text-blue-500 w-5 h-5 transition hover:scale-125`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -27,7 +27,7 @@ export default function ThemeController() {
           </svg>
         ) : (
           <svg
-            className={`swap-off fill-current text-blue-500 w-5 h-5`}
+            className={`swap-off fill-current text-blue-500 w-5 h-5 transition hover:scale-125`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
