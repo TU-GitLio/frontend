@@ -1,17 +1,21 @@
+"use client";
+
 import EditBuilder from "@/components/EditBuilder";
 import EditHeader from "@/components/EditHeader";
 import SideBar from "@/components/SideBar";
 import Title from "@/components/Title";
+import useStore from "@/hooks/darkmode";
 
 export default function IntrodutionPage() {
+  const { darkMode } = useStore();
   return (
     <>
-      <div className="w-full h-full grid bg-primary grid-cols-5 grid-rows-9">
+      <div className="w-full h-full grid grid-cols-5 grid-rows-9">
         <div className="flex justify-center row-span-9 col-span-1 relative h-full border border-primary">
           <SideBar />
         </div>
         <EditHeader />
-        <div className="col-span-3 row-span-8 h-full bg-primary border border-[#B1C9FF]">
+        <div className="col-span-3 row-span-8 h-full border border-[#B1C9FF]">
           <div className="flex flex-col h-full items-center px-5 ">
             <Title />
             <EditBuilder>
@@ -40,8 +44,12 @@ export default function IntrodutionPage() {
           </div>
         </div>
 
-        <div className="flex justify-center items-center col-span-1 row-span-8 h-full bg-primary border border-primary">
-          <div className="w-[90%] h-[90%] bg-[#BFCBF6] lg:rounded-[20px] rounded-[30px] flex  justify-center ">
+        <div className="flex justify-center items-center col-span-1 row-span-8 h-full border border-primary">
+          <div
+            className={`w-[90%] h-[90%] ${
+              darkMode ? "bg-[#1E293B]" : "bg-[#BFCBF6]"
+            } lg:rounded-[20px] rounded-[30px] flex  justify-center`}
+          >
             <div className="w-[40%] h-[23%] bg-[#6385FD] rounded-[20px] flex  items-center text-center justify-center ml-0 mt-10 text-white">
               레이아웃1
             </div>

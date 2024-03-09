@@ -1,5 +1,6 @@
 "use client";
 
+import useStore from "@/hooks/darkmode";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -7,10 +8,15 @@ export default function SideBar() {
   const pathName = usePathname();
   const titleArray = pathName.split("/");
   const titleUrl = titleArray[titleArray.length - 1];
+  const { darkMode } = useStore();
 
   return (
     <div className="flex h-full w-full sm:h-full">
-      <div className="flex flex-col items-center w-full bg-primary border border-primary">
+      <div
+        className={`flex flex-col items-center ${
+          darkMode ? "bg-sideDark" : "bg-primary"
+        } w-full h-full border border-primary`}
+      >
         <div className="text-center mt-[10%] ">
           <img
             src="/gitlio.png"

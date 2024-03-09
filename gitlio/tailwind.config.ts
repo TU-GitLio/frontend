@@ -15,6 +15,8 @@ const config: Config = {
       },
       colors: {
         primary: "#DDE5FF",
+        sideDark: "#1E293B",
+        black: "#000000 !important",
       },
     },
     screens: {
