@@ -1,3 +1,5 @@
+"use client";
+
 import EditBuilder from "@/components/EditBuilder";
 import EditHeader from "@/components/EditHeader";
 import SideBar from "@/components/SideBar";
@@ -5,19 +7,25 @@ import Title from "@/components/Title";
 import { PiTrashThin } from "react-icons/pi";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import useStore from "@/hooks/darkmode";
 
 export default function WorksPage() {
+  const { darkMode } = useStore();
   return (
     <>
-      <div className="w-full h-full grid bg-[#DDE5FF] grid-cols-5 grid-rows-9">
+      <div className="w-full h-full grid grid-cols-5 grid-rows-9">
         <div className="flex justify-center col-span-1 relative row-span-9 h-full border border-primary">
           <SideBar />
         </div>
         <EditHeader />
-        <div className="col-span-3 row-span-8 h-full bg-[#DCE6FF] border border-[#B1C9FF]">
+        <div className="col-span-3 row-span-8 h-full border border-[#B1C9FF]">
           <div className="flex flex-row h-full w-full justify-around items-center">
             <div className="flex flex-col justify-center items-center w-14 h-14 ml-10">
-              <IoIosArrowBack className="w-full h-full cursor-pointer" />
+              <IoIosArrowBack
+                className={`${
+                  darkMode ? "fill-white" : ""
+                } w-full h-full cursor-pointer`}
+              />
             </div>
             <div className="flex flex-col w-full h-full items-center">
               <Title />
@@ -34,7 +42,11 @@ export default function WorksPage() {
                       </div>
                       <div className="flex flex-row items-center justify-center rounded-full mr-[10%]">
                         <button className="w-8 h-8 flex flex-row justify-center items-center rounded-md border-2 border-gray-200">
-                          <PiTrashThin className="border-gray-200 cursor-pointer" />
+                          <PiTrashThin
+                            className={`${
+                              darkMode ? "fill-blue-300 bg-current" : ""
+                            }border-gray-200 cursor-pointer`}
+                          />
                         </button>
                       </div>
                     </div>
@@ -80,13 +92,25 @@ export default function WorksPage() {
               </EditBuilder>
             </div>
             <div className="flex flex-col justify-center items-center w-14 h-14 mr-10">
-              <IoIosArrowForward className="w-full h-full cursor-pointer" />
+              <IoIosArrowForward
+                className={`${
+                  darkMode ? "fill-white" : ""
+                } w-full h-full cursor-pointer`}
+              />
             </div>
           </div>
         </div>
 
-        <div className="flex justify-center items-center col-span-1 row-span-8 h-full bg-primary border border-primary">
-          <div className="flex flex-col lg:w-[60%] lg:h-[90%] bg-[#BFCBF6]  lg:rounded-[20px] xl:rounded-[30px] items-center">
+        <div
+          className={`flex justify-center items-center col-span-1 row-span-8 h-full ${
+            darkMode ? "bg-black" : "bg-primary"
+          } border border-primary`}
+        >
+          <div
+            className={`flex flex-col lg:w-[60%] lg:h-[90%] ${
+              darkMode ? "bg-[#1E293B]" : "bg-[#BFCBF6]"
+            } lg:rounded-[20px] xl:rounded-[30px] items-center`}
+          >
             <div className="w-[60%] h-[20%] bg-[#6385FD] lg:rounded-[15px] xl:rounded-[20px] flex items-center text-center justify-center lg:mt-[11.5%] text-white font-medium">
               프로젝트1
             </div>

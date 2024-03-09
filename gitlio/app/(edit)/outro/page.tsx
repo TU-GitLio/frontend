@@ -1,17 +1,21 @@
+"use client";
+
 import EditBuilder from "@/components/EditBuilder";
 import EditHeader from "@/components/EditHeader";
 import SideBar from "@/components/SideBar";
 import Title from "@/components/Title";
+import useStore from "@/hooks/darkmode";
 
 export default function OutroPage() {
+  const { darkMode } = useStore();
   return (
     <>
-      <div className="w-full h-full grid bg-primary grid-cols-5 grid-rows-9">
+      <div className="w-full h-full grid grid-cols-5 grid-rows-9">
         <div className="flex justify-center row-span-9 col-span-1 relative h-full border border-primary">
           <SideBar />
         </div>
         <EditHeader />
-        <div className="col-span-3 row-span-8 h-full bg-primary border border-[#B1C9FF]">
+        <div className="col-span-3 row-span-8 h-fullborder border-[#B1C9FF]">
           <div className="flex flex-col h-full items-center px-5 ">
             <Title />
             <EditBuilder>
@@ -33,8 +37,16 @@ export default function OutroPage() {
           </div>
         </div>
 
-        <div className="flex justify-center items-center col-span-1 row-span-8 h-full bg-primary border border-primary">
-          <div className="w-[90%] h-[90%] bg-[#BFCBF6] lg:rounded-[20px] rounded-[30px] flex items-center justify-center flex-col">
+        <div
+          className={`flex justify-center items-center col-span-1 row-span-8 h-full ${
+            darkMode ? "bg-black" : "bg-primary"
+          } border border-primary`}
+        >
+          <div
+            className={`w-[90%] h-[90%] ${
+              darkMode ? "bg-[#1E293B]" : "bg-[#BFCBF6] "
+            } lg:rounded-[20px] rounded-[30px] flex items-center justify-center flex-col`}
+          >
             <button className="w-[90%] h-[10%] bg-[#6385FD] md:rounded-[10px] lg:rounded-[15px] xl:rounded-[20px] flex items-center text-center justify-center ml-0 mt-5 text-white border-none outline-none cursor-pointer">
               전체 미리보기
             </button>

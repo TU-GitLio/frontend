@@ -15,6 +15,8 @@ const config: Config = {
       },
       colors: {
         primary: "#DDE5FF",
+        sideDark: "#1E293B",
+        black: "#000000 !important",
       },
     },
     screens: {
@@ -32,6 +34,7 @@ const config: Config = {
       // xl: { min: "1300px" },
     },
     mode: "jit",
+    darkMode: "class",
   },
   plugins: [require("daisyui")],
 };
