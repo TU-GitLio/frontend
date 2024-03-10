@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import ImageSelectionModal from "@/components/ImgSelectModal";
+import ImageSelectionModal from "@/components/studio/ImgSelectModal";
 
 interface Data {
   url: string;
