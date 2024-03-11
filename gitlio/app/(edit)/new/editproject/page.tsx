@@ -56,7 +56,7 @@ function Page() {
   const [selectedSentences, setSelectedSentences] = useState<{
     [url: string]: Set<number>;
   }>({});
-
+  const [savedUrls, setSavedUrls] = useState<{ [url: string]: boolean }>({});
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
   // 로컬 스토리지에서 URL 목록 불러오기
@@ -122,28 +122,16 @@ function Page() {
       sentences: savedSentences,
     };
     localStorage.setItem("selectedContents", JSON.stringify(selectedContents));
+    setSavedUrls((prev) => ({ ...prev, [selectedUrl]: true }));
   };
+
+  const allUrlsSaved = repositoryUrls.every((url) => savedUrls[url]);
 
   return (
     <div className="flex min-h-screen w-full">
-      <Sidebar onSelectUrl={setSelectedUrl} />
+      <Sidebar onSelectUrl={setSelectedUrl} savedUrls={savedUrls} />
       <div className="flex-col items-center w-full px-4">
         <Navbar />
-        <div>
-          <select
-            className="select select-bordered select-sm w-full max-w-xs mt-5"
-            onChange={(e) => setSelectedUrl(e.target.value)}
-          >
-            <option disabled selected>
-              선택되지 않음
-            </option>
-            {repositoryUrls.map((url) => (
-              <option key={url} value={url}>
-                {url}
-              </option>
-            ))}
-          </select>
-        </div>
         {selectedData && (
           <div className="mt-4">
             <div>
@@ -188,7 +176,11 @@ function Page() {
             저장
           </button>
           <Link href="/new/showproject" legacyBehavior>
-            <button className="btn btn-success">생성</button>
+            <button
+              className={`btn ${allUrlsSaved ? "btn-success" : "btn-disabled"}`}
+            >
+              생성
+            </button>
           </Link>
         </div>
       </div>
