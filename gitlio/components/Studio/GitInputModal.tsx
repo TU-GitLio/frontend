@@ -27,7 +27,7 @@ const GitInputModal: React.FC<GitInputModalProps> = ({ onClose }) => {
     const allFilled = inputs.every((input) => input.trim() !== "");
     if (allFilled) {
       localStorage.setItem("repositoryUrls", JSON.stringify(inputs));
-      window.location.href = "/new/project";
+      window.location.href = "/new/editproject";
     } else {
       alert("모든 레포지토리 URL을 입력해주세요.");
     }

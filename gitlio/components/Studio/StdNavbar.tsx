@@ -11,9 +11,10 @@ export default function StdNavbar() {
       return "Posts";
     } else if (pathname.includes("/studio/settings")) {
       return "Settings";
+    } else if (pathname.includes("/studio/dashboard")) {
+      return "Dashboard";
     }
-    // 기본 텍스트
-    return "Dashboard";
+    return "New Project";
   };
 
   return (

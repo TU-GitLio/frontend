@@ -14,14 +14,16 @@ export default function StdSidebar() {
   return (
     <div className="h-full w-72 border border-gray-200">
       <div className="flex h-[4.15rem] items-center justify-center w-full border-b border-gray-200">
-        <div className="flex items-center justify-center gap-2 text-xl font-bold text-center">
-          <img
-            alt="gitlio studio logo"
-            src="https://i.ibb.co/W2f1nPj/Group-70.png"
-            className="w-6 h-6"
-          />
-          GITLIO STUDIO
-        </div>
+        <Link href="/studio/dashboard" legacyBehavior>
+          <div className="flex items-center justify-center gap-2 text-xl font-bold text-center">
+            <img
+              alt="gitlio studio logo"
+              src="https://i.ibb.co/W2f1nPj/Group-70.png"
+              className="w-6 h-6"
+            />
+            GITLIO STUDIO
+          </div>
+        </Link>
       </div>
       <div className="mt-4 flex flex-col items-center ">
         <div className="border-b border-gray-200 w-full">
