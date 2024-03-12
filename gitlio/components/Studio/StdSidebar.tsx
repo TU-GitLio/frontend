@@ -2,20 +2,29 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import NewFolioModal from "@/components/studio/GitInputModal";
+import GitInputModal from "./GitInputModal";
+import MakeNewPortModal from "./MakeNewPortModal";
 
 export default function StdSidebar() {
   const pathname = usePathname();
   const isActive = (paths: any) => paths.includes(pathname);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMakeNewPortModalOpen, setIsMakeNewPortModalOpen] = useState(false);
+  const [isGitInputModalOpen, setIsGitInputModalOpen] = useState(false);
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
+  const toggleMakeNewPortModal = () =>
+    setIsMakeNewPortModalOpen(!isMakeNewPortModalOpen);
+  const openGitInputModal = () => {
+    setIsGitInputModalOpen(true);
+    setIsMakeNewPortModalOpen(false); // 첫 번째 모달을 닫고 두 번째 모달을 열기
+  };
 
   return (
     <div className="h-full w-72 border border-gray-200">
       <div className="flex h-[4.15rem] items-center justify-center w-full border-b border-gray-200">
         <Link href="/studio/dashboard" legacyBehavior>
-          <div className="flex items-center justify-center gap-2 text-xl font-bold text-center">
+          <div className="flex items-center justify-center gap-2 text-xl font-bold text-center  cursor-pointer">
             <img
               alt="gitlio studio logo"
               src="https://i.ibb.co/W2f1nPj/Group-70.png"
@@ -30,13 +39,18 @@ export default function StdSidebar() {
           <div className="flex justify-center ">
             <button
               className="btn btn-wide bg-[#3379FF] text-white mb-4"
-              onClick={toggleModal}
+              onClick={toggleMakeNewPortModal}
             >
               새로운 포트폴리오 생성
             </button>
+            {isMakeNewPortModalOpen && (
+              <MakeNewPortModal onClose={openGitInputModal} /> // 첫 번째 모달
+            )}
+            {isGitInputModalOpen && (
+              <GitInputModal onClose={() => setIsGitInputModalOpen(false)} /> // 두 번째 모달
+            )}
           </div>
         </div>
-        {isModalOpen && <NewFolioModal onClose={toggleModal} />}
 
         <Link href="/studio/dashboard" legacyBehavior>
           <a

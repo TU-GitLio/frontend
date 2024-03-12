@@ -42,7 +42,51 @@ const sampleData: Data[] = [
       "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
       "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
     ],
-    sentences: ["구글입니다 어쩌고", "두 번째 설명"],
+    sentences: ["구글입니다 어쩌고", "celery beat로 스케쥴링 된 task 실행"],
+  },
+
+  {
+    url: "https://github.com/2023-WinterBootcamp-Team-M",
+    images: [
+      "https://i.ibb.co/NTd8vTG/2024-03-12-1-23-06.png",
+      "https://i.ibb.co/GWdLNnC/2024-03-12-2-05-32.png",
+      "https://i.ibb.co/sybwTHR/2024-03-12-2-07-23.png",
+    ],
+    sentences: [
+      "만약 자동 분류 북마크 생성을 선택했다면 카테고리도 gpt로 자동 분류되어 저장",
+      "celery beat로 스케쥴링 된 task 실행",
+      "이미지(url)를 클립보드에 저장하고 drag&drop, download 등으로 활용",
+      "새로 url을 넣으면 정해진 갯수를 넘어가는 데이터는 Queue 형식으로 자동 삭제 ",
+    ],
+  },
+  {
+    url: "https://github.com/SV-Summer-BootCamp-Team-F",
+    images: [
+      "https://i.ibb.co/jV9W28Y/2024-03-12-1-46-15.png",
+      "https://i.ibb.co/p0WvXfx/2024-03-12-1-45-12.png",
+      "https://i.ibb.co/2cRgbZs/2024-03-12-1-44-33.png",
+    ],
+    sentences: [
+      "한눈에 보기 편한 UI/UX",
+      "차트를 통한 분석 ⇒ 나만의 관계 데이터 관리",
+    ],
+  },
+  {
+    url: "https://github.com/Fashion-Cloud",
+    images: [
+      "https://i.ibb.co/KKSKMnc/2024-03-12-2-11-35.png",
+      "https://i.ibb.co/vd9Gr8Z/2024-03-12-2-11-52.png",
+      "https://i.ibb.co/s64tzfn/2024-03-12-2-12-06.png",
+      "https://i.ibb.co/X4MP1QY/2024-03-12-2-12-17.png",
+      "https://i.ibb.co/TY0zY8R/2024-03-12-2-12-28.png",
+      "https://i.ibb.co/8rYWrh8/2024-03-12-2-10-57.png",
+    ],
+    sentences: [
+      "Spring Security를 이용한 로그인 기능 구현",
+      "Next.js로의 마이그레이션, 상태관리 라이브러리 변경",
+      "조회수 기능에 Look Aside + Write back 캐싱 적용",
+      "key구성 변경, 단위 분리하기",
+    ],
   },
 ];
 

@@ -42,7 +42,7 @@ const GitInputModal: React.FC<GitInputModalProps> = ({ onClose }) => {
           </button>
         </form>
         <div>
-          <div className="text-2xl font-bold mb-5 ">
+          <div className="text-2xl font-bold ">
             깃허브 레포지토리 url 입력
             <button onClick={addInput} className="btn btn-sm btn-ghost ml-2">
               +
