@@ -50,7 +50,7 @@ const StdSidebar: React.FC<StdSidebarProps> = ({ onSelectUrl, savedUrls }) => {
             >
               {displayUrl}
               {savedUrls[url] && (
-                <span className="ml-2 text-green-500 font-bold">✓</span>
+                <span className=" text-green-500 font-bold">✓</span>
               )}
             </button>
           );
