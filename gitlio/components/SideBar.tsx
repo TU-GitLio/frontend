@@ -127,7 +127,7 @@ export default function SideBar() {
                 <div className="bg-white w-6 rounded-full text-black shrink-0">
                   <span className="font-medium">5</span>
                 </div>
-                <div className="mr-auto ml-2 font-medium md:truncate sm:truncatemr-auto">
+                <div className="mr-auto ml-2 font-medium md:truncate sm:truncate">
                   Outro
                 </div>
               </button>
