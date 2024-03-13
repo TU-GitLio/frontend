@@ -26,9 +26,15 @@ export default function SideBar() {
           <div className="font-normal">GitHub repo url</div>
         </div>
         <div className="flex flex-row mt-[8%] mb-[3%] shrink-0 sm:mt-10 sm:flex-col sm:justify-center">
-          <div className="mr-3 font-medium">임시저장</div>
-          <div className="mr-3 font-medium sm:hidden">|</div>
-          <div className="mr-3 font-medium sm:mt-2">미리보기</div>
+          <div className={`mr-3 font-medium ${darkMode ? "text-white" : ""}`}>
+            임시저장
+          </div>
+          <div className={`mr-3 font-medium ${darkMode ? "text-white" : ""}`}>
+            |
+          </div>
+          <div className={`mr-3 font-medium ${darkMode ? "text-white" : ""}`}>
+            미리보기
+          </div>
         </div>
         <LeftSideBarBtn />
       </div>
