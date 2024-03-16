@@ -20,7 +20,7 @@ export default function ExperiencePage() {
             <EditBuilder>
               <div className="flex flex-row justify-around items-center h-full">
                 <div className="flex flex-col justify-center basis-[480px] h-80 text-center box-border border-4 border-primary">
-                  <ul className="timeline flex flex-row flex-nowrap justify-center xl:overflow-hidden">
+                  <ul className="timeline flex flex-row flex-nowrap justify-center md:overflow-hidden">
                     <li>
                       <div className="w-[130px] h-[42px] timeline-start timeline-box">
                         <input className="w-full h-full text-xs text-center hover:border-2 hover:border-primary" />

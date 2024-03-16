@@ -11,11 +11,11 @@ export default function OutroPage() {
   return (
     <>
       <div className="w-full h-full grid grid-cols-5 grid-rows-9">
-        <div className="flex justify-center row-span-9 col-span-1 relative h-full border border-primary">
+        <div className="flex justify-center row-span-9 col-span-1 relative h-full">
           <SideBar />
         </div>
         <EditHeader />
-        <div className="col-span-3 row-span-8 h-fullborder border-[#B1C9FF]">
+        <div className="col-span-3 row-span-8 h-full border border-[#B1C9FF]">
           <div className="flex flex-col h-full items-center px-5 ">
             <Title />
             <EditBuilder>

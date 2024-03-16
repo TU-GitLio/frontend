@@ -11,7 +11,7 @@ export default function SkillsPage() {
   return (
     <>
       <div className="w-full h-full grid grid-cols-5 grid-rows-9">
-        <div className="flex justify-center row-span-9 col-span-1 relative h-full border border-#B1C9FF]">
+        <div className="flex justify-center row-span-9 col-span-1 h-full border border-[#B1C9FF]">
           <SideBar />
         </div>
         <EditHeader />
