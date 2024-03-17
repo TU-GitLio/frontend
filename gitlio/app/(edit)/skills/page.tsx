@@ -56,7 +56,7 @@ export default function SkillsPage() {
           >
             <div className="flex flex-row justify-evenly items-center mt-5">
               <input
-                className="block w-4/5 rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-#B1C9FF] focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="input input-bordered text-lg max-w-xs w-4/5 rounded-md border-0 py-1.5 pl-7 pr-20 ring-1 ring-inset ring-gray-300 placeholder:text-#B1C9FF] focus:ring-2 focus:ring-inset focus:ring-indigo-400 sm:text-sm sm:leading-6"
                 placeholder="languages.."
               />
             </div>
@@ -100,7 +100,7 @@ export default function SkillsPage() {
               </div>
             </div>
 
-            <div className="flex flex-row justify-center items-center mb-3 w-32 h-10 rounded-xl cursor-pointer border-[#B1C9FF] bg-white text-black border-4">
+            <div className="btn hover:bg-primary hover:border-primary flex flex-row justify-center items-center text-lg mb-3 w-32 h-10 rounded-xl cursor-pointer border-primary bg-white text-black border-4">
               가로변환
             </div>
           </div>
