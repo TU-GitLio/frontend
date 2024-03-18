@@ -7,6 +7,8 @@ import Sidebar from "@/components/studio/RepoSidebar";
 
 interface Data {
   url: string;
+  title: string;
+  intro: string;
   images: string[];
   sentences: string[];
 }
@@ -15,6 +17,8 @@ interface Data {
 const sampleData: Data[] = [
   {
     url: "www.naver.com",
+    title: "",
+    intro: "",
     images: [
       "https://blog.kakaocdn.net/dn/CNxUY/btqw7dnElRU/HuVZgvpT6J8n4aEYFathEk/img.jpg",
       "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
@@ -25,6 +29,8 @@ const sampleData: Data[] = [
   },
   {
     url: "www.daum.net",
+    title: "",
+    intro: "",
     images: [
       "https://blog.kakaocdn.net/dn/yElzG/btqw7QZODLs/iA6TBn80hto4lndolDKB00/img.jpg",
       "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
@@ -35,6 +41,8 @@ const sampleData: Data[] = [
   },
   {
     url: "www.google.com",
+    title: "",
+    intro: "",
     images: [
       "https://cdn-icons-png.flaticon.com/512/5968/5968863.png",
       "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
@@ -47,6 +55,8 @@ const sampleData: Data[] = [
 
   {
     url: "https://github.com/2023-WinterBootcamp-Team-M",
+    title: "",
+    intro: "",
     images: [
       "https://i.ibb.co/NTd8vTG/2024-03-12-1-23-06.png",
       "https://i.ibb.co/GWdLNnC/2024-03-12-2-05-32.png",
@@ -61,6 +71,8 @@ const sampleData: Data[] = [
   },
   {
     url: "https://github.com/SV-Summer-BootCamp-Team-F",
+    title: "",
+    intro: "",
     images: [
       "https://i.ibb.co/jV9W28Y/2024-03-12-1-46-15.png",
       "https://i.ibb.co/p0WvXfx/2024-03-12-1-45-12.png",
@@ -73,6 +85,8 @@ const sampleData: Data[] = [
   },
   {
     url: "https://github.com/Fashion-Cloud",
+    title: "",
+    intro: "",
     images: [
       "https://i.ibb.co/KKSKMnc/2024-03-12-2-11-35.png",
       "https://i.ibb.co/vd9Gr8Z/2024-03-12-2-11-52.png",
@@ -96,8 +110,9 @@ function Page() {
   const [repositoryUrls, setRepositoryUrls] = useState([]);
   const [selectedUrl, setSelectedUrl] = useState("");
   const [selectedData, setSelectedData] = useState<Data | null>(null);
+  const [title, setTitle] = useState("");
+  const [intro, setIntro] = useState("");
   const [displayedImage, setDisplayedImage] = useState<string>(defaultImage);
-
   const [savedUrls, setSavedUrls] = useState<{ [url: string]: boolean }>({});
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
   const [editableSentences, setEditableSentences] = useState<string[]>([]);
@@ -132,9 +147,13 @@ function Page() {
       ? currentContents[selectedUrl].sentences
       : [];
 
-    setEditableSentences(
-      savedSentences.length > 0 ? savedSentences : data?.sentences || []
-    );
+    if (currentContents[selectedUrl]) {
+      setTitle(currentContents[selectedUrl].title || "");
+      setIntro(currentContents[selectedUrl].intro || "");
+      setEditableSentences(
+        currentContents[selectedUrl].sentences || data?.sentences || []
+      );
+    }
   }, [selectedUrl]);
 
   const handleImageSelect = (image: string) => {
@@ -157,6 +176,8 @@ function Page() {
     );
     currentContents[selectedUrl] = {
       ...currentContents[selectedUrl],
+      title,
+      intro,
       sentences: editableSentences,
       image: displayedImage, // Ensure the image is also updated
     };
@@ -173,8 +194,6 @@ function Page() {
     setEditableSentences(updatedSentences);
   };
 
-  const allUrlsSaved = repositoryUrls.every((url) => savedUrls[url]);
-
   const handleChangeSentence = (index: number, newSentence: string) => {
     const updatedSentences = [...editableSentences];
     updatedSentences[index] = newSentence;
@@ -188,6 +207,21 @@ function Page() {
         <Navbar />
         {selectedData && (
           <div className="mt-4">
+            <div>
+              <input
+                type="text"
+                placeholder="타이틀"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                className="input input-bordered w-full my-2"
+              />
+              <textarea
+                placeholder="인트로"
+                value={intro}
+                onChange={(e) => setIntro(e.target.value)}
+                className="textarea textarea-bordered w-full my-2"
+              />
+            </div>
             <div>
               <img
                 src={displayedImage}
@@ -223,7 +257,7 @@ function Page() {
                     onClick={() => handleDeleteSentence(index)}
                     className="btn btn-error btn-sm"
                   >
-                    X
+                    x
                   </button>
                 </div>
               ))}
