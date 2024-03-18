@@ -4,8 +4,8 @@ import Navbar from "@/components/studio/StdNavbar";
 
 // 저장된 URL 정보와 프로젝트 이름을 포함한 타입 정의
 interface SavedContent {
-  projectName: string; // 프로젝트 이름을 저장하기 위한 필드 추가
-  projectSummary: string; // 프로젝트 설명을 저장하기 위한 필드 추가
+  title: string;
+  intro: string;
   image: string;
   sentences: string[];
 }
@@ -36,32 +36,6 @@ function Page() {
     setSavedContents(filteredContents);
   }, []);
 
-  const handleProjectNameChange = (url: string, projectName: string) => {
-    setSavedContents((prevContents) => {
-      const updatedContents = {
-        ...prevContents,
-        [url]: { ...prevContents[url], projectName },
-      };
-      localStorage.setItem("selectedContents", JSON.stringify(updatedContents));
-      return updatedContents;
-    });
-  };
-
-  const handleProjectSummary = (url: string, projectSummary: string) => {
-    setSavedContents((prevContents) => {
-      const updatedContents = {
-        ...prevContents,
-        [url]: { ...prevContents[url], projectSummary },
-      };
-      localStorage.setItem("selectedContents", JSON.stringify(updatedContents));
-      return updatedContents;
-    });
-  };
-
-  const formatPlaceholder = (url: string) => {
-    return url.replace("https://github.com/", "");
-  };
-
   return (
     <div className="container mx-auto px-4">
       <Navbar />
@@ -70,20 +44,8 @@ function Page() {
           key={index}
           className="flex flex-col w-2/3 items-center mt-3 mb-3 border border-gray-400 p-4 rounded-md"
         >
-          <input
-            type="text"
-            placeholder={formatPlaceholder(url)}
-            className="input input-bordered mt-2"
-            value={content.projectName || ""}
-            onChange={(e) => handleProjectNameChange(url, e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="프로젝트 설명"
-            className="input input-bordered mt-2 mb-2"
-            value={content.projectSummary || ""}
-            onChange={(e) => handleProjectSummary(url, e.target.value)}
-          />
+          <h2 className="text-xl font-bold">{content.title}</h2>
+          <p className="mb-4">{content.intro}</p>
           <img src={content.image} alt="Saved" className="max-w-xs mt-2" />
           <ul className="list-disc ml-8 mt-2">
             {content.sentences.map((sentence, sentenceIndex) => (
