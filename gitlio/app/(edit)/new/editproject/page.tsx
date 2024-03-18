@@ -97,11 +97,10 @@ function Page() {
   const [selectedUrl, setSelectedUrl] = useState("");
   const [selectedData, setSelectedData] = useState<Data | null>(null);
   const [displayedImage, setDisplayedImage] = useState<string>(defaultImage);
-  const [selectedSentences, setSelectedSentences] = useState<{
-    [url: string]: Set<number>;
-  }>({});
+
   const [savedUrls, setSavedUrls] = useState<{ [url: string]: boolean }>({});
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+  const [editableSentences, setEditableSentences] = useState<string[]>([]);
 
   // 로컬 스토리지에서 URL 목록 불러오기
   useEffect(() => {
@@ -109,16 +108,15 @@ function Page() {
       localStorage.getItem("repositoryUrls") || "[]"
     );
     setRepositoryUrls(loadedUrls);
-    const loadedSentences = JSON.parse(
-      localStorage.getItem("selectedSentences") || "{}"
-    );
-    setSelectedSentences(loadedSentences);
   }, []);
 
   // 선택된 URL에 해당하는 데이터 찾기
   useEffect(() => {
     const data = sampleData.find((data) => data.url === selectedUrl);
     setSelectedData(data ?? null);
+    if (data) {
+      setEditableSentences(data.sentences);
+    }
 
     const selectedImages = JSON.parse(
       localStorage.getItem("selectedImages") || "{}"
@@ -126,24 +124,23 @@ function Page() {
     const imageUrl = selectedImages[selectedUrl] || defaultImage;
     // URL 변경 시 화면에 표시되는 이미지도 업데이트
     setDisplayedImage(imageUrl);
+
+    const currentContents = JSON.parse(
+      localStorage.getItem("selectedContents") || "{}"
+    );
+    const savedSentences = currentContents[selectedUrl]
+      ? currentContents[selectedUrl].sentences
+      : [];
+
+    setEditableSentences(
+      savedSentences.length > 0 ? savedSentences : data?.sentences || []
+    );
   }, [selectedUrl]);
 
   const handleImageSelect = (image: string) => {
     // 이미지 선택 시 즉시 화면에 반영
     setDisplayedImage(image);
     setModalIsOpen(false);
-  };
-
-  const toggleSentenceSelection = (index: number) => {
-    setSelectedSentences((prev) => {
-      const newSelection = new Set(prev[selectedUrl] || []);
-      if (newSelection.has(index)) {
-        newSelection.delete(index);
-      } else {
-        newSelection.add(index);
-      }
-      return { ...prev, [selectedUrl]: newSelection };
-    });
   };
 
   const handleSave = () => {
@@ -153,23 +150,36 @@ function Page() {
     );
     selectedImages[selectedUrl] = displayedImage;
     localStorage.setItem("selectedImages", JSON.stringify(selectedImages));
+    setSavedUrls((prev) => ({ ...prev, [selectedUrl]: true }));
 
-    // 선택된 문장 저장 로직
-    const savedSentences = selectedData?.sentences.filter((_, index) =>
-      selectedSentences[selectedUrl]?.has(index)
-    );
-    const selectedContents = JSON.parse(
+    const currentContents = JSON.parse(
       localStorage.getItem("selectedContents") || "{}"
     );
-    selectedContents[selectedUrl] = {
-      image: displayedImage,
-      sentences: savedSentences,
+    currentContents[selectedUrl] = {
+      ...currentContents[selectedUrl],
+      sentences: editableSentences,
+      image: displayedImage, // Ensure the image is also updated
     };
-    localStorage.setItem("selectedContents", JSON.stringify(selectedContents));
-    setSavedUrls((prev) => ({ ...prev, [selectedUrl]: true }));
+
+    localStorage.setItem("selectedContents", JSON.stringify(currentContents));
+  };
+
+  const handleAddSentence = () => {
+    setEditableSentences([...editableSentences, ""]);
+  };
+
+  const handleDeleteSentence = (index: number) => {
+    const updatedSentences = editableSentences.filter((_, i) => i !== index);
+    setEditableSentences(updatedSentences);
   };
 
   const allUrlsSaved = repositoryUrls.every((url) => savedUrls[url]);
+
+  const handleChangeSentence = (index: number, newSentence: string) => {
+    const updatedSentences = [...editableSentences];
+    updatedSentences[index] = newSentence;
+    setEditableSentences(updatedSentences);
+  };
 
   return (
     <div className="flex min-h-screen w-full">
@@ -199,19 +209,30 @@ function Page() {
             </div>
             <h3 className="text-lg font-semibold mt-4">문장:</h3>
             <div>
-              {selectedData.sentences.map((sentence, index) => (
+              {editableSentences.map((sentence, index) => (
                 <div key={index} className="flex items-center gap-2 mt-2">
                   <input
-                    type="checkbox"
-                    className="checkbox"
-                    checked={
-                      selectedSentences[selectedUrl]?.has(index) || false
+                    type="text"
+                    value={sentence}
+                    className="input input-bordered w-full"
+                    onChange={(e) =>
+                      handleChangeSentence(index, e.target.value)
                     }
-                    onChange={() => toggleSentenceSelection(index)}
                   />
-                  <p>{sentence}</p>
+                  <button
+                    onClick={() => handleDeleteSentence(index)}
+                    className="btn btn-error btn-sm"
+                  >
+                    X
+                  </button>
                 </div>
               ))}
+              <button
+                onClick={handleAddSentence}
+                className="btn btn-primary mt-2 btn-sm"
+              >
+                +
+              </button>
             </div>
           </div>
         )}
@@ -221,7 +242,11 @@ function Page() {
           </button>
           <Link href="/new/showproject" legacyBehavior>
             <button
-              className={`btn ${allUrlsSaved ? "btn-success" : "btn-disabled"}`}
+              className={`btn ${
+                Object.keys(savedUrls).length === repositoryUrls.length
+                  ? "btn-success"
+                  : "btn-disabled"
+              }`}
             >
               생성
             </button>
