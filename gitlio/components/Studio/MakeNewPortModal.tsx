@@ -49,7 +49,7 @@ const MakeNewPortModal: React.FC<MakeNewPortModalProps> = ({ onClose }) => {
           </div>
         </div>
         <button onClick={handleSubmit} className="btn btn-success mt-3">
-          프로젝트 요약 생성
+          다음
         </button>
       </div>
       <form method="dialog" className="modal-backdrop">

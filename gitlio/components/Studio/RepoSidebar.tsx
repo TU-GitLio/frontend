@@ -43,7 +43,7 @@ const StdSidebar: React.FC<StdSidebarProps> = ({ onSelectUrl, savedUrls }) => {
           return (
             <button
               key={index}
-              className={`btn btn-wide my-2 mx-4 gap-2 justify-start ${
+              className={`btn btn-wide my-2 mx-4 gap-2 justify-center ${
                 selectedUrl === url ? "bg-selected text-black" : "btn-ghost"
               }`} // 조건부 스타일링 적용
               onClick={() => handleSelectUrl(url)}
