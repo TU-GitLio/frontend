@@ -14,6 +14,7 @@ export default function IntrodutionPage() {
         <div className="flex justify-center row-span-9 col-span-1 relative h-full border border-primary">
           <SideBar />
         </div>
+
         <EditHeader />
         <div className="col-span-3 row-span-8 h-full border border-[#B1C9FF]">
           <div className="flex flex-col h-full items-center px-5 ">

@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         primary: "#DDE5FF",
+        selected: "#e5e7eb",
         sideDark: "#1E293B",
         black: "#000000 !important",
       },
