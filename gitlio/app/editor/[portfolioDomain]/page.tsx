@@ -1,3 +1,10 @@
+import ProjSection from "@/app/editor/_components/mainSection/ProjSection";
+
 export default function EditPage() {
-  return <div>여기서 포트폴리오 편집헤여</div>;
+  return (
+    <div>
+      왜 이거 안 뜸?
+      <ProjSection />
+    </div>
+  );
 }
