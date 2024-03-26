@@ -5,5 +5,10 @@ export default async function EditorLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div>홈 레이아웃{children}</div>;
+  return (
+    <div>
+      <div className="w-full h-16 bg-slate-600 text-white">상단바</div>
+      {children}
+    </div>
+  );
 }
