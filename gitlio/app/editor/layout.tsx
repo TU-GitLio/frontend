@@ -1,5 +1,6 @@
 import { LuAlignJustify, LuBarChartBig } from "react-icons/lu";
 import { FaGlobeAsia } from "react-icons/fa";
+import Image from "next/image";
 
 type Props = {
     children: React.ReactNode;
@@ -9,7 +10,11 @@ export default function EditorLayout({ children } : Props) {
         <div>
             <div className="navbar bg-neutral-800">
                 <div className="flex-1">
-                    <a className="btn btn-ghost text-xl text-white hover:bg-base-300/20">GITLIO</a>
+
+                    <a className="btn btn-ghost text-xl text-white hover:bg-base-300/20">
+                        <Image src={"/logo_white_lg.svg"} alt={"whiteLogo"} width={30} height={30}/>
+                        GITLIO
+                    </a>
                 </div>
                 <div className="flex-none gap-6">
                     <a className="btn btn-ghost text-lg text-white hover:bg-base-300/20">
