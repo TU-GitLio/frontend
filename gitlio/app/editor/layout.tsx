@@ -2,6 +2,8 @@ import cx from "classnames";
 import TopBar from "@/app/editor/_components/TopBar";
 import LeftSidebar from "@/app/editor/_components/LeftSidebar";
 import BaseSideBar from "@/app/editor/_components/(rightSideBar)/BaseSideBar";
+import { LuAlignJustify, LuBarChartBig } from "react-icons/lu";
+import { FaGlobeAsia } from "react-icons/fa";
 
 type Props = {
   children: React.ReactNode;
