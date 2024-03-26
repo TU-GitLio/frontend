@@ -12,8 +12,8 @@ interface Data {
 const sampleData: Data[] = [
   {
     url: "https://github.com/2023-WinterBootcamp-Team-M",
-    title: "",
-    intro: "",
+    title: "ClipTab",
+    intro: "똑똑한 북마크 익스텐션",
     images: [
       "https://i.ibb.co/NTd8vTG/2024-03-12-1-23-06.png",
       "https://i.ibb.co/GWdLNnC/2024-03-12-2-05-32.png",
@@ -28,8 +28,8 @@ const sampleData: Data[] = [
   },
   {
     url: "https://github.com/SV-Summer-BootCamp-Team-F",
-    title: "",
-    intro: "",
+    title: "Remember Plus",
+    intro: "당신의 명함을 밤하늘의 별자리로",
     images: [
       "https://i.ibb.co/jV9W28Y/2024-03-12-1-46-15.png",
       "https://i.ibb.co/p0WvXfx/2024-03-12-1-45-12.png",
@@ -42,8 +42,8 @@ const sampleData: Data[] = [
   },
   {
     url: "https://github.com/Fashion-Cloud",
-    title: "",
-    intro: "",
+    title: "Fashion Cloud",
+    intro: "날씨별 패션 공유 플랫폼",
     images: [
       "https://i.ibb.co/KKSKMnc/2024-03-12-2-11-35.png",
       "https://i.ibb.co/vd9Gr8Z/2024-03-12-2-11-52.png",
