@@ -25,18 +25,28 @@ function ProjBox({ data }: { data: Data }) {
   };
 
   return (
-    <div className="border border-gray-700 rounded-lg shadow p-4 m-4">
+    <div className="border-2 border-gray-300 rounded-lg shadow p-4 m-4">
       <h2 className="text-2xl font-bold mb-2">{data.title || "No Title"}</h2>
       <p className="mb-4">{data.intro || "No Introduction"}</p>
-      <div className="flex flex-wrap justify-center gap-4">
-        {data.images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Project Image ${index + 1}`}
-            style={{ maxWidth: "200px", margin: "10px" }}
-          />
-        ))}
+      <div className="relative">
+        <img
+          src={data.images[currentImageIndex]}
+          alt={`Project Image ${currentImageIndex + 1}`}
+          className="max-w-xs my-2"
+          style={{ maxWidth: "100%", height: "auto", objectFit: "contain" }}
+        />
+        <button
+          onClick={goToPreviousImage}
+          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-1 rounded-full"
+        >
+          &lt;
+        </button>
+        <button
+          onClick={goToNextImage}
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-1 rounded-full"
+        >
+          &gt;
+        </button>
       </div>
       <ul className="list-disc pl-5">
         {data.sentences.map((sentence, index) => (
