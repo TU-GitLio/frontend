@@ -4,6 +4,7 @@ import LeftSidebar from "@/app/editor/_components/LeftSidebar";
 import BaseSideBar from "@/app/editor/_components/(rightSideBar)/BaseSideBar";
 import { LuAlignJustify, LuBarChartBig } from "react-icons/lu";
 import { FaGlobeAsia } from "react-icons/fa";
+import Image from "next/image";
 
 type Props = {
   children: React.ReactNode;
