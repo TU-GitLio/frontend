@@ -46,7 +46,7 @@ const options: Highcharts.Options = {
   },
   yAxis: {
     title: {
-      text: "방문자 수",
+      text: " ",
     },
   },
   plotOptions: {

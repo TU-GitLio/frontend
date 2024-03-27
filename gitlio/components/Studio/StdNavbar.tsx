@@ -5,19 +5,23 @@ export default function StdNavbar() {
   const pathname = usePathname();
 
   const getNavbarText = () => {
-    if (pathname.includes("/studio/statistics")) {
+    if (pathname.includes("studio/statistics")) {
       return "Statistics";
-    } else if (pathname.includes("/studio/posts")) {
+    } else if (pathname.includes("studio/posts")) {
       return "Posts";
-    } else if (pathname.includes("/studio/settings")) {
+    } else if (pathname.includes("studio/settings")) {
       return "Settings";
-    }
-    // 기본 텍스트
-    return "Dashboard";
+    } else if (pathname.includes("studio/dashboard")) {
+      return "Dashboard";
+    } else if (pathname.includes("new/editproject")) {
+      return "New Project";
+    } else if (pathname.includes("new/showproject")) {
+      return "Your Project";
+    } else return "Unknown Page";
   };
 
   return (
-    <div className="navbar  border border-gray-200">
+    <div className="navbar border-b border-gray-200">
       <div className="flex-1">
         <a className="btn btn-ghost text-xl">{getNavbarText()}</a>
       </div>
