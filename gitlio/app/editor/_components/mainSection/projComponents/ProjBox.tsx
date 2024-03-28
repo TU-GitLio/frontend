@@ -1,5 +1,8 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import gitIcon from "@/public/github.png";
 
 interface Data {
   url: string;
@@ -25,8 +28,8 @@ function ProjBox({ data }: { data: Data }) {
   };
 
   return (
-    <div className="flex border border-gray-300 rounded-lg shadow p-4 m-8 w-[60%]">
-      <div className="flex-none relative w-2/5 h-80 bg-gray-200">
+    <div className="flex border border-gray-300 shadow-lg rounded-lg p-4 m-8 w-[70%] relative">
+      <div className="flex-none relative w-2/5 h-80 bg-gray-200 rounded-lg">
         <img
           src={data.images[currentImageIndex]}
           alt={`Project Image ${currentImageIndex + 1}`}
@@ -45,23 +48,31 @@ function ProjBox({ data }: { data: Data }) {
           &gt;
         </button>
       </div>
-      <div className="flex-3 pl-4 w-3/5">
-        <h2 className="text-2xl font-bold mb-2">{data.title || "No Title"}</h2>
-        <p className="text-lg mb-4">{data.intro || "No Introduction"}</p>
-
-        <ul className="list-disc pl-5">
-          {data.sentences.map((sentence, index) => (
-            <li key={index}>{sentence}</li>
-          ))}
-        </ul>
-        <a
-          href={data.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 hover:text-blue-700 mt-4 inline-block"
-        >
-          Visit Project
-        </a>
+      <div className="flex-1 pl-4 w-3/5 flex flex-col justify-between">
+        <div>
+          <h2 className="text-2xl font-bold">{data.title || "No Title"}</h2>
+          <p className="mb-4">{data.intro || "No Introduction"}</p>
+          <div className="border-2 border-gray-300 rounded-lg p-3 mb-4">
+            <p className="font-semibold">주요 개발 내용</p>
+            <ul className="list-disc pl-5">
+              {data.sentences.map((sentence, index) => (
+                <li key={index} className="text-sm mb-1">
+                  {sentence}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <Link href={data.url}>
+          <div className="btn self-end inline-flex items-center">
+            <Image
+              src={gitIcon}
+              alt="github icon"
+              className="w-6 h-6 inline-block"
+            />
+            <p className="text-sm ml-2">자세히 보러가기</p>
+          </div>
+        </Link>
       </div>
     </div>
   );

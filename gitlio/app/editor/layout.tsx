@@ -7,8 +7,10 @@ export default async function EditorLayout({
 }) {
   return (
     <div>
-      <div className="w-full h-16 bg-slate-600 text-white">상단바</div>
-      {children}
+      <main className="bg-backGray">
+        <div className="w-full h-16 bg-slate-600 text-white">상단바</div>
+        {children}
+      </main>
     </div>
   );
 }

@@ -38,6 +38,8 @@ const sampleData: Data[] = [
     sentences: [
       "한눈에 보기 편한 UI/UX",
       "차트를 통한 분석 ⇒ 나만의 관계 데이터 관리",
+      "D3.js의 zoom 이벤트 핸들러에 transform 속성을 사용하고, 내부에 그래프 렌더링을 통해 복잡한 Network 그래프 구현",
+      "프론트엔드 개발 효율을 높이기 위해 퍼블리싱 이후 MSW를 이용한 API Mocking",
     ],
   },
   {
@@ -117,10 +119,17 @@ const sampleData: Data[] = [
 
 export default function ProjSection() {
   return (
-    <div>
-      {sampleData.map((data, index) => (
-        <ProjBox key={index} data={data} />
-      ))}
+    <div className="bg-white m-8 mx-32 rounded-3xl">
+      <br />
+      <div className="flex items-center -mb-3">
+        <h1 className="text-3xl font-medium ml-10 mr-5">#Project</h1>
+        <div className="btn">편집</div>
+      </div>
+      <div className="flex flex-col items-center">
+        {sampleData.map((data, index) => (
+          <ProjBox key={index} data={data} />
+        ))}
+      </div>
     </div>
   );
 }

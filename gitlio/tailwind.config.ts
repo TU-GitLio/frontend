@@ -18,6 +18,7 @@ const config: Config = {
         selected: "#e5e7eb",
         sideDark: "#1E293B",
         black: "#000000 !important",
+        backGray: "#F1F3F5",
       },
     },
     screens: {
