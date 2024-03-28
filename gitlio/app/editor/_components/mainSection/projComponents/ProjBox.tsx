@@ -2,15 +2,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import gitIcon from "@/public/github.png";
-
-interface Data {
-  url: string;
-  title: string;
-  intro: string;
-  images: string[];
-  sentences: string[];
-}
+import { FaGithub } from "react-icons/fa";
+import { Data } from "@/app/editor/_components/(interface)/ProjectData";
 
 function ProjBox({ data }: { data: Data }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -28,7 +21,7 @@ function ProjBox({ data }: { data: Data }) {
   };
 
   return (
-    <div className="flex border border-gray-300 shadow-lg rounded-lg p-4 m-8 w-[70%] relative">
+    <div className="flex border border-gray-300 shadow-lg rounded-lg p-4 m-8 w-[90%] relative">
       <div className="flex-none relative w-2/5 h-80 bg-gray-200 rounded-lg">
         <img
           src={data.images[currentImageIndex]}
@@ -65,11 +58,7 @@ function ProjBox({ data }: { data: Data }) {
         </div>
         <Link href={data.url}>
           <div className="btn self-end inline-flex items-center">
-            <Image
-              src={gitIcon}
-              alt="github icon"
-              className="w-6 h-6 inline-block"
-            />
+            <FaGithub className="w-6 h-6" />
             <p className="text-sm ml-2">자세히 보러가기</p>
           </div>
         </Link>

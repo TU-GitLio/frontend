@@ -21,13 +21,8 @@ const config: Config = {
         backGray: "#F1F3F5",
       },
     },
-    screens: {
-      sm: { max: "768px" },
-      md: { max: "1023px" },
-      lg: { min: "1023px" },
-      xl: { min: "1300px" },
+  },
   mode: "jit",
-
 
   plugins: [require("daisyui")],
 
@@ -41,6 +36,5 @@ const config: Config = {
     logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
     themeRoot: ":root", // The element that receives theme color CSS variables
   },
-
 };
 export default config;

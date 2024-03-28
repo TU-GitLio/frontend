@@ -1,13 +1,6 @@
 import React from "react";
 import ProjBox from "./projComponents/ProjBox";
-
-interface Data {
-  url: string;
-  title: string;
-  intro: string;
-  images: string[];
-  sentences: string[];
-}
+import { Data } from "@/app/editor/_components/(interface)/ProjectData";
 
 const sampleData: Data[] = [
   {
@@ -119,7 +112,7 @@ const sampleData: Data[] = [
 
 export default function ProjSection() {
   return (
-    <div className="bg-white m-8 mx-32 rounded-3xl">
+    <div className="bg-white m-8 rounded-3xl">
       <br />
       <div className="flex items-center -mb-3">
         <h1 className="text-3xl font-medium ml-10 mr-5">#Project</h1>
