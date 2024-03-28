@@ -5,5 +5,6 @@ export default function EditPage() {
     <div>
       <ProjSection />
     </div>
+
   );
 }
