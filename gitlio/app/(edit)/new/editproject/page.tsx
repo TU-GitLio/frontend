@@ -16,44 +16,6 @@ interface Data {
 // 예시 데이터
 const sampleData: Data[] = [
   {
-    url: "www.naver.com",
-    title: "",
-    intro: "",
-    images: [
-      "https://blog.kakaocdn.net/dn/CNxUY/btqw7dnElRU/HuVZgvpT6J8n4aEYFathEk/img.jpg",
-      "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
-      "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
-      "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
-    ],
-    sentences: ["네이버입니다 어쩌고", "두 번째 설명"],
-  },
-  {
-    url: "www.daum.net",
-    title: "",
-    intro: "",
-    images: [
-      "https://blog.kakaocdn.net/dn/yElzG/btqw7QZODLs/iA6TBn80hto4lndolDKB00/img.jpg",
-      "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
-      "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
-      "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
-    ],
-    sentences: ["다음입니다 어쩌고", "두 번째 설명"],
-  },
-  {
-    url: "www.google.com",
-    title: "",
-    intro: "",
-    images: [
-      "https://cdn-icons-png.flaticon.com/512/5968/5968863.png",
-      "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
-      "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
-      "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
-      "https://i.ibb.co/w7KCcXL/free-icon-example-5486150.png",
-    ],
-    sentences: ["구글입니다 어쩌고", "celery beat로 스케쥴링 된 task 실행"],
-  },
-
-  {
     url: "https://github.com/2023-WinterBootcamp-Team-M",
     title: "",
     intro: "",
