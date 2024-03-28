@@ -1,6 +1,6 @@
 import React from "react";
 import ProjBox from "./projComponents/ProjBox";
-import { Data } from "@/app/editor/_components/(interface)/ProjectData";
+import { Data } from "@/app/editor/(interface)/ProjectData";
 
 const sampleData: Data[] = [
   {

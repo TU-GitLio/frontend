@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
-import { Data } from "@/app/editor/_components/(interface)/ProjectData";
+import { Data } from "@/app/editor/(interface)/ProjectData";
 
 function ProjBox({ data }: { data: Data }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
