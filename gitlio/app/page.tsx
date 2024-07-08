@@ -14,9 +14,6 @@ const StartPage: React.FC = () => {
   return (
     <div className="flex flex-col bg-primary h-screen justify-center items-center">
       <div className="fixed top-0 left-0 w-full">
-        <nav className="w-full h-[60px] flex items-center justify-between px-4 py-2 border-b border-border bg-[#F3F3F3]">
-          <NavAnimation />
-        </nav>
         <nav className="flex justify-between items-center border-b border-border h-[60px] px-4 py-2 bg-white">
           <Gicon />
           <SignedOut>
