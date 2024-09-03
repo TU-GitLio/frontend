@@ -1,21 +1,20 @@
 'use client';
-import React, { useState } from 'react';
+import { useState } from 'react';
 // ModalButton.js
 
-import IntroSection from '@/app/editor/_components/mainSection/IntroSection';
-import SkillSection from '@/app/editor/_components/mainSection/SkillSection';
 import ExperienceSection from '@/app/editor/_components/mainSection/ExperienceSection';
-import ProjSection from './mainSection/ProjSection';
-import ContactSection from './mainSection/ContactSection';
-import { MdPreview } from 'react-icons/md';
-import { FaGlobeAsia } from 'react-icons/fa';
+import IntroSection from '@/app/editor/_components/mainSection/IntroSection';
+import SkillSectionView from '@/app/editor/_components/mainSection/SkillSectionView'; // Assuming the path to your Zustand store
 import TopBlogBar from '@/app/editor/_components/TopBlogBar';
 import usePreviewStore from '@/store/previewStore';
-import SkillSectionView from '@/app/editor/_components/mainSection/SkillSectionView'; // Assuming the path to your Zustand store
+import { MdPreview } from 'react-icons/md';
+import ContactSection from './mainSection/ContactSection';
+import ProjSection from './mainSection/ProjSection';
 
 const ModalButton = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const setPreview = usePreviewStore((state) => state.setPreview);
+  const preview = usePreviewStore((state) => state.preview)
 
   const openModal = (): void => {
     setIsModalOpen(true);
@@ -36,7 +35,7 @@ const ModalButton = () => {
         <MdPreview className="text-white size-6" />
         미리보기
       </a>
-      {isModalOpen && (
+      {isModalOpen && preview && (
         <dialog open className="modal" aria-labelledby="modal-title">
           <div className="modal-box max-w-full max-h-full bg-base-200">
             <form method="dialog">
